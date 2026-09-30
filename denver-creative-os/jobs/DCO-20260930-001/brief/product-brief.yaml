@@ -1,0 +1,46 @@
+﻿job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+product_class: side-table
+source_path: source/product-reference.png
+known_facts:
+  - demo-only asset from samples/fictional-furniture (not a client SKU)
+  - side table with a thick, box-shaped light wood top/body
+  - wood grain and horizontal tonal variations visible on the body
+  - four dark, slender legs beneath the body
+  - visible legs taper and angle outward
+  - source shown alone against a dark/black studio background
+inferences:
+  - modern minimalist geometric form
+  - two-tone contrast (light wood body + dark legs) is intentional identity
+  - intended for living-room / sofa-side or bedroom use in lifestyle shots
+must_preserve:
+  - overall side-table silhouette and compact proportions
+  - thick box-shaped light wood body profile
+  - light natural wood appearance / grain family on the body
+  - four dark tapered outward-angled legs (count, color family, taper, outward angle)
+  - two-tone relationship (light body / dark legs)
+  - no invented drawers, shelves, metal frame redesign, or logos unless clearly evidenced
+flexible_styling:
+  - wall color and texture
+  - floor finish (light wood, rug)
+  - plant / greenery props
+  - soft ambient decor (book, ceramic, lamp) that does not obscure legs or body identity
+  - lifestyle room depth, lighting mood, camera angle within shot plan
+unknowns:
+  - exact dimensions, wood species name, and finish SKU (fictional — waived)
+  - whether the body includes a drawer or hidden storage (treat as unknown; do not invent unless source proves it)
+  - precise leg material and attachment hardware detail under occlusion
+target_audience: interior catalog and furniture e-commerce shoppers
+desired_visual_world: warm restrained modern interior (or clean studio) that highlights the light wood body and dark legs
+commercial_use: catalog-lifestyle
+status: BRIEF_APPROVED
+intake:
+  hermes_vision: used
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_004535_19b489
+  note: Vision YAML merged into known_facts/inferences/must_preserve; file outputs follow skill templates.
+approval:
+  approved_by: operator-rommy
+  approved_at: 2026-09-30T08:46:21+08:00
+  note: Demo brief sign-off for DCO-3 pause gate; fictional product.

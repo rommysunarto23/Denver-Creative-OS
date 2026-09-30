@@ -1,0 +1,58 @@
+# Delivery manifest - DCO-20260930-001
+# Operator override package. Generation stayed MANUAL_CHATGPT_IMAGES. Image API spend 0.
+
+job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+delivery_timestamp: "2026-09-30T15:48:41+08:00"
+package_status: PACKAGE_DONE
+delivery_status: DELIVERED
+generation_method: MANUAL_CHATGPT_IMAGES
+incremental_image_api_spend_usd: 0
+approved_assets:
+  - shot_id: SHOT-01-ANGLED
+    file: shot-01-angled.png
+    approved_copy: approved/SHOT-01-ANGLED.png
+    source_candidate: "candidates/SHOT-01-ANGLED/ChatGPT Image Sep 30, 2026, 09_14_19 AM.png"
+    prompt_version: 1
+    qa: APPROVED
+    qa_file: qa/SHOT-01-ANGLED-cand-01.yaml
+    hermes_decision: APPROVE
+    geometry_drift: false
+  - shot_id: SHOT-02-STRAIGHT
+    file: shot-02-straight.png
+    approved_copy: approved/SHOT-02-STRAIGHT.png
+    source_candidate: candidates/SHOT-02-STRAIGHT/Cand-04.png
+    prompt_version: 5
+    qa: APPROVED
+    qa_file: qa/SHOT-02-STRAIGHT-cand-04.yaml
+    hermes_decision: REVISE
+    human_decision: APPROVED
+    operator_override: true
+    geometry_drift: true
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    file: shot-03-medium-close.png
+    approved_copy: approved/SHOT-03-MEDIUM-CLOSE.png
+    source_candidate: "candidates/SHOT-03-MEDIUM-CLOSE/ChatGPT Image Sep 30, 2026, 09_16_32 AM.png"
+    prompt_version: 1
+    qa: APPROVED
+    qa_file: qa/SHOT-03-MEDIUM-CLOSE-cand-01.yaml
+    hermes_decision: APPROVE
+    geometry_drift: false
+known_limitations:
+  - Demo fictional product; not a client asset.
+  - SHOT-02 accepted only by explicit operator override. Hermes decision remains REVISE (source_fidelity BLOCK + geometry BLOCK).
+  - geometry_drift true on SHOT-02. Body still wide/shallow vs compact vertically deep source slab; body height below ~1/3-2/5; legs still thick vs slender stick/dowel.
+  - Fail-closed geometry failed 4x (cand-01, cand-02, Cand-03, Cand-04). GPT Image primary cause. No auto v6.
+  - Cand-03 was not selected. Same commercial_usability WARN, and its rug fights the plain-studio straight-shot constraint.
+  - incremental_image_api_spend_usd is 0. No DCO-4 in this package.
+lineage:
+  brief: brief/product-brief.yaml
+  plan: plan/shot-plan.yaml
+  qa: qa/qa-report-v5.yaml
+  operator_next: OPERATOR_NEXT.md
+  chosen_shot_02: candidates/SHOT-02-STRAIGHT/Cand-04.png
+  rejected_alternative: candidates/SHOT-02-STRAIGHT/Cand-03.png
+operator_override:
+  reason: "Fail-closed geometry failed 4x; GPT Image primary cause."
+  geometry_drift: true
+  chosen: Cand-04

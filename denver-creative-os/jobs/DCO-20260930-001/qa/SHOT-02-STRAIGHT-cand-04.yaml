@@ -1,0 +1,45 @@
+job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-04
+candidate_path: "candidates/SHOT-02-STRAIGHT/Cand-04.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 5
+revision_round: 4
+source_path: source/product-reference.png
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_074206_a40aa0
+  compared_to: source/product-reference.png
+  hermes_workspace_images:
+    - /opt/data/workspace/dco-20260930-001-qa/product-reference.png
+    - /opt/data/workspace/dco-20260930-001-qa/shot-02-cand04.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: WARN
+blocking_violations:
+  - "Body is too wide and shallow for the required compact, vertically deep slab form."
+  - "Body height is visibly below the required 1/3-2/5 of full product height."
+  - "Legs appear too thick and insufficiently tapered for the source's slender stick/dowel geometry."
+findings:
+  - "Centered, straight-on studio view with a plain floor and no distracting props (v5 scene strategy landed)."
+  - "Light-wood body and dark legs preserve the intended two-tone palette."
+  - "Visible left-right leg placement is broadly balanced, but the proportions do not match the source."
+  - "Fail family matches cand-01/02/03: wide/shallow body + thick legs (not a new/different fail class)."
+  - "Cand-04.png present (1254x1254); prior Cand-03.png, cand-02.png, and ChatGPT v1 file retained."
+decision: REVISE
+revision_instruction: "Rebuild to match the source: make the body compact in width and substantially deeper in height, targeting 1/3-2/5 of total product height. Use four clearly slender, dark, tapered stick/dowel legs splayed outward, with balanced left-right symmetry. Keep the light-wood body, dark legs, straight-on centered view, and plain studio background; add no drawers or shelves."
+human_decision: APPROVED
+qa_at: 2026-09-30T15:43:05+08:00
+geometry_drift: true
+operator_override: true
+human_approved_at: 2026-09-30T15:48:41+08:00
+selected_candidate: Cand-04
+selection_note: "Best SHOT-02 is Cand-04. Preferred for scene/studio: plain studio floor, no rug/sofa, matches shot-plan constraint. Cand-03 not closer commercially (both commercial_usability WARN; Cand-03 rug is prominent and off the current straight-shot constraint)."
+operator_override_reason: "Fail-closed geometry failed 4x (cand-01, cand-02, Cand-03, Cand-04). GPT Image primary cause. Operator accepts fidelity risk for the demo. Hermes decision stays REVISE; human_decision APPROVED is an explicit override, not an auto-approve."

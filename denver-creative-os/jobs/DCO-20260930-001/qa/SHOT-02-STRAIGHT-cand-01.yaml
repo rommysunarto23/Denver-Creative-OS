@@ -1,0 +1,36 @@
+job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-01
+candidate_path: "candidates/SHOT-02-STRAIGHT/ChatGPT Image Sep 30, 2026, 09_14_38 AM.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_012243_0e8167
+  compared_to: source/product-reference.png
+  also_inspected_via: Read-tool image description on box copy
+criteria:
+  source_fidelity: WARN
+  geometry: BLOCK
+  material_color: PASS
+  shot_compliance: WARN
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: WARN
+blocking_violations:
+  - "Legs appear substantially thicker and less slender than the source legs."
+  - "The body reads unusually wide and dominant for a compact side table (width-to-height drift vs source)."
+findings:
+  - Thick box-shaped light-wood body and dark two-tone treatment are present.
+  - Four outward-splayed legs visible, but bulk weakens fidelity to slender tapered source geometry.
+  - Table centered and nearly straight-on; slight top depth visible.
+  - No drawers or shelves visible.
+  - Tabletop decor distracts from evaluating the product silhouette.
+decision: REVISE
+revision_instruction: "Match the source compact width-to-height proportions and reduce body visual dominance. Make all four legs slender, clearly tapered, dark, and outward-angled, preserving symmetry in a straight-on front elevation. Minimize or remove tabletop decor so the product silhouette is unobstructed."
+human_decision: ""
+qa_at: 2026-09-30T09:23:39+08:00

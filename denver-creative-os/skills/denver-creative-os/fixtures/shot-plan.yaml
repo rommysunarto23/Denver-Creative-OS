@@ -1,0 +1,28 @@
+﻿job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+shots:
+  - shot_id: SHOT-01-ANGLED
+    shot_type: angled
+    camera_framing: three-quarter angled view
+    purpose: hero lifestyle
+    must_show: [full table silhouette]
+    constraints: [preserve four legs]
+    prompt_slug: shot-01-angled
+    prompt_version: 1
+  - shot_id: SHOT-02-STRAIGHT
+    shot_type: straight
+    camera_framing: straight-on front
+    purpose: proportion read
+    must_show: [front elevation]
+    constraints: [no perspective warp]
+    prompt_slug: shot-02-straight
+    prompt_version: 1
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    shot_type: medium-close
+    camera_framing: medium-close on top edge and join
+    purpose: material confidence
+    must_show: [oak grain family]
+    constraints: [no redesign of join]
+    prompt_slug: shot-03-medium-close
+    prompt_version: 1
+status: SHOT_PLAN_READY

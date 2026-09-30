@@ -1,0 +1,62 @@
+﻿# Consolidated QA v2 — DCO-20260930-001 (SHOT-02 cand-02 / revision round 1)
+# Fail-closed: any BLOCK on source_fidelity or geometry => REVISE for that shot.
+# Prior: qa-report-v1.yaml (SHOT-02 cand-01 REVISE). This report covers cand-02 only + gate status.
+
+job_id: DCO-20260930-001
+report_id: qa-report-v2
+revision_round: 1
+source_path: source/product-reference.png
+qa_at: 2026-09-30T09:42:10+08:00
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  sessions:
+    SHOT-02-STRAIGHT-cand-02: 20260930_014104_9b53ca
+candidates_verified:
+  - shot_id: SHOT-02-STRAIGHT
+    filename: cand-02.png
+    present: true
+    prior_chatgpt_file_retained: "ChatGPT Image Sep 30, 2026, 09_14_38 AM.png"
+
+shots:
+  - shot_id: SHOT-01-ANGLED
+    candidate_id: SHOT-01-ANGLED-cand-01
+    qa_file: qa/SHOT-01-ANGLED-cand-01.yaml
+    note: unchanged from qa-report-v1; Hermes APPROVE recommend; human_decision empty
+    decision: APPROVE
+    human_decision: ""
+  - shot_id: SHOT-02-STRAIGHT
+    candidate_id: SHOT-02-STRAIGHT-cand-02
+    qa_file: qa/SHOT-02-STRAIGHT-cand-02.yaml
+    prompt_version: 2
+    criteria:
+      source_fidelity: BLOCK
+      geometry: BLOCK
+      material_color: PASS
+      shot_compliance: PASS
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: WARN
+    blocking_violations:
+      - Body too wide/oversized vs compact source proportions
+      - Legs too thick vs slender tapered source
+    decision: REVISE
+    human_decision: ""
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    candidate_id: SHOT-03-MEDIUM-CLOSE-cand-01
+    qa_file: qa/SHOT-03-MEDIUM-CLOSE-cand-01.yaml
+    note: unchanged from qa-report-v1; Hermes APPROVE recommend; human_decision empty
+    decision: APPROVE
+    human_decision: ""
+
+summary:
+  hermes_recommend_approve:
+    - SHOT-01-ANGLED
+    - SHOT-03-MEDIUM-CLOSE
+  revise_required:
+    - SHOT-02-STRAIGHT
+  overall_gate: REVISION_REQUIRED
+  revision_cycle: 2
+  note: "SHOT-02 cand-02 still fail-closed (source_fidelity BLOCK + geometry BLOCK). Wrote prompts/shot-02-straight-v3.md. Cap default 2 cycles/shot — this is cycle 2. No auto-approve."

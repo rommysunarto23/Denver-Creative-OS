@@ -1,0 +1,38 @@
+﻿job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-03
+candidate_path: "candidates/SHOT-02-STRAIGHT/Cand-03.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 3
+revision_round: 2
+source_path: source/product-reference.png
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_014858_b4f509
+  compared_to: source/product-reference.png
+  hermes_workspace_images:
+    - /opt/data/workspace/dco-20260930-001-qa/product-reference.png
+    - /opt/data/workspace/dco-20260930-001-qa/shot-02-cand03.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: WARN
+blocking_violations:
+  - "The body reads too wide for the compact source table proportions."
+  - "The visible front legs are too thick relative to the slender tapered legs in the source."
+findings:
+  - "The light wood box-shaped body and dark two-tone legs are preserved; no drawers or shelves are visible."
+  - "The front elevation is centered and generally symmetrical, with four legs visible."
+  - "The body-to-width proportion and leg thickness remain insufficiently faithful to the source."
+  - "Lifestyle staging is polished, but the rug texture is visually prominent."
+  - "Cand-03.png present (1254x1254); prior cand-02.png and ChatGPT v1 file retained."
+decision: REVISE
+revision_instruction: "Narrow the body to match the source's compact proportions. Make all four legs distinctly slimmer, tapered, and outward-angled like the source; preserve the thick light-wood box body, dark legs, two-tone finish, and no drawers or shelves. Keep a centered, straight-on, symmetrical front elevation."
+human_decision: ""
+qa_at: 2026-09-30T09:50:31+08:00

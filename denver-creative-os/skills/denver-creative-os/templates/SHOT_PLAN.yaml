@@ -1,0 +1,31 @@
+﻿# Template / example shape for plan/shot-plan.yaml
+# V0 requires exactly these three shot_id values.
+
+job_id: DCO-YYYYMMDD-001
+product_label: ""
+shots:
+  - shot_id: SHOT-01-ANGLED
+    shot_type: angled
+    camera_framing: three-quarter angled view showing depth and primary silhouette
+    purpose: hero lifestyle angle for catalog/listing
+    must_show: []
+    constraints: []
+    prompt_slug: shot-01-angled
+    prompt_version: 1
+  - shot_id: SHOT-02-STRAIGHT
+    shot_type: straight
+    camera_framing: straight-on front elevation, centered, minimal perspective distortion
+    purpose: clear front read of proportions and symmetry
+    must_show: []
+    constraints: []
+    prompt_slug: shot-02-straight
+    prompt_version: 1
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    shot_type: medium-close
+    camera_framing: medium-close detail on material, joinery, or signature feature
+    purpose: material/finish confidence for commercial use
+    must_show: []
+    constraints: []
+    prompt_slug: shot-03-medium-close
+    prompt_version: 1
+status: DRAFT              # DRAFT | SHOT_PLAN_READY

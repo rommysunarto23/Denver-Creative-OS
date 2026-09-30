@@ -1,0 +1,85 @@
+# Consolidated QA v1 — DCO-20260930-001
+# Per-shot detail also in qa/SHOT-*-cand-01.yaml
+# Fail-closed: any BLOCK on source_fidelity or geometry => REVISE for that shot.
+
+job_id: DCO-20260930-001
+report_id: qa-report-v1
+revision_round: 0
+source_path: source/product-reference.png
+qa_at: 2026-09-30T09:23:39+08:00
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  sessions:
+    SHOT-01-ANGLED: 20260930_012241_009c70
+    SHOT-02-STRAIGHT: 20260930_012243_0e8167
+    SHOT-03-MEDIUM-CLOSE: 20260930_012244_8eaf96
+candidates_verified:
+  - shot_id: SHOT-01-ANGLED
+    filename: "ChatGPT Image Sep 30, 2026, 09_14_19 AM.png"
+    present: true
+  - shot_id: SHOT-02-STRAIGHT
+    filename: "ChatGPT Image Sep 30, 2026, 09_14_38 AM.png"
+    present: true
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    filename: "ChatGPT Image Sep 30, 2026, 09_16_32 AM.png"
+    present: true
+
+shots:
+  - shot_id: SHOT-01-ANGLED
+    candidate_id: SHOT-01-ANGLED-cand-01
+    qa_file: qa/SHOT-01-ANGLED-cand-01.yaml
+    criteria:
+      source_fidelity: PASS
+      geometry: PASS
+      material_color: PASS
+      shot_compliance: PASS
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: PASS
+    blocking_violations: []
+    decision: APPROVE
+    human_decision: ""
+  - shot_id: SHOT-02-STRAIGHT
+    candidate_id: SHOT-02-STRAIGHT-cand-01
+    qa_file: qa/SHOT-02-STRAIGHT-cand-01.yaml
+    criteria:
+      source_fidelity: WARN
+      geometry: BLOCK
+      material_color: PASS
+      shot_compliance: WARN
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: WARN
+    blocking_violations:
+      - Legs thicker/less slender than source
+      - Body too wide/dominant vs compact source proportions
+    decision: REVISE
+    human_decision: ""
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    candidate_id: SHOT-03-MEDIUM-CLOSE-cand-01
+    qa_file: qa/SHOT-03-MEDIUM-CLOSE-cand-01.yaml
+    criteria:
+      source_fidelity: PASS
+      geometry: PASS
+      material_color: PASS
+      shot_compliance: PASS
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: PASS
+    blocking_violations: []
+    decision: APPROVE
+    human_decision: ""
+
+summary:
+  hermes_recommend_approve:
+    - SHOT-01-ANGLED
+    - SHOT-03-MEDIUM-CLOSE
+  revise_required:
+    - SHOT-02-STRAIGHT
+  overall_gate: REVISION_REQUIRED
+  note: "MVP requires >=1 REVISE. Real fail-closed geometry BLOCK on SHOT-02 drives REVISE-1. SHOT-01/03 Hermes-recommend APPROVE but human_decision remains empty (no auto-approve)."

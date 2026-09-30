@@ -1,0 +1,23 @@
+﻿job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+product_class: side-table
+source_path: source/product-reference.png
+known_facts:
+  - rectangular top
+  - four straight legs
+  - light oak finish
+inferences:
+  - casual living-room use
+must_preserve:
+  - overall silhouette
+  - four-leg geometry
+  - light oak color family
+flexible_styling:
+  - wall color
+  - plant props
+unknowns:
+  - exact leg taper angle
+target_audience: interior catalog shoppers
+desired_visual_world: bright Scandinavian living room
+commercial_use: catalog-lifestyle
+status: BRIEF_APPROVED

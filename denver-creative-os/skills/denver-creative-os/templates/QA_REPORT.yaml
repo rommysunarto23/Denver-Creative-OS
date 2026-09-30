@@ -1,0 +1,27 @@
+﻿# Template / example shape for qa/<candidate-id>.yaml
+# Fail-closed: BLOCK on source_fidelity or geometry forces decision REVISE.
+# human_decision is human-only; never auto-approve.
+
+job_id: DCO-YYYYMMDD-001
+candidate_id: ""
+candidate_path: ""
+shot_id: SHOT-01-ANGLED    # SHOT-01-ANGLED | SHOT-02-STRAIGHT | SHOT-03-MEDIUM-CLOSE
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+
+criteria:
+  source_fidelity: PASS      # PASS | WARN | BLOCK  (fail-closed fidelity field)
+  geometry: PASS             # PASS | WARN | BLOCK  (fail-closed fidelity field)
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: PASS
+
+blocking_violations: []
+findings: []
+decision: ""                 # APPROVE | REVISE  (Hermes recommendation)
+revision_instruction: ""
+human_decision: ""           # APPROVED | REJECTED | "" — human-only, never auto-filled as APPROVED

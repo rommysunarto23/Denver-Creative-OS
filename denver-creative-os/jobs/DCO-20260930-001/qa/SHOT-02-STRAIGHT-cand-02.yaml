@@ -1,0 +1,38 @@
+﻿job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-02
+candidate_path: "candidates/SHOT-02-STRAIGHT/cand-02.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 2
+revision_round: 1
+source_path: source/product-reference.png
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_014104_9b53ca
+  compared_to: source/product-reference.png
+  hermes_workspace_images:
+    - /opt/data/workspace/dco-20260930-001-qa/product-reference.png
+    - /opt/data/workspace/dco-20260930-001-qa/shot-02-cand02.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: WARN
+blocking_violations:
+  - "Body is too wide and visually oversized versus the source compact side-table proportions."
+  - "Legs are too thick; the source has slender, tapered legs angled outward."
+findings:
+  - "Light wood box-shaped body and dark legs preserve the two-tone design."
+  - "No drawers or shelves are visible."
+  - "Front elevation is centered and broadly symmetrical; four legs appear present."
+  - "Lifestyle scene is clean and well lit, but geometry/source fidelity mismatch prevents approval."
+  - "cand-02.png present (1122x1402); prior ChatGPT v1 file retained."
+decision: REVISE
+revision_instruction: "Narrow the body to match the source compact proportions. Make all four legs distinctly slender and tapered, angled outward; retain the thick box-shaped light-wood body, dark legs, two-tone finish, centered straight-on elevation, and no drawers or shelves."
+human_decision: ""
+qa_at: 2026-09-30T09:42:10+08:00

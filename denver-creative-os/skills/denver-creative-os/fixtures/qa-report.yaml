@@ -1,0 +1,22 @@
+﻿job_id: DCO-20260930-001
+candidate_id: SHOT-01-ANGLED-c1
+candidate_path: candidates/SHOT-01-ANGLED/c1.png
+shot_id: SHOT-01-ANGLED
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+criteria:
+  source_fidelity: PASS
+  geometry: PASS
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: WARN
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: PASS
+blocking_violations: []
+findings:
+  - soft shadow falloff slightly flat
+decision: APPROVE
+revision_instruction: ""
+human_decision: ""

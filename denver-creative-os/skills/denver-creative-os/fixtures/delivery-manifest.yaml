@@ -1,0 +1,23 @@
+﻿job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+delivery_timestamp: "2026-09-30T08:00:00+08:00"
+generation_method: MANUAL_CHATGPT_IMAGES
+incremental_image_api_spend_usd: 0
+approved_assets:
+  - shot_id: SHOT-01-ANGLED
+    file: shot-01-angled.png
+    prompt_version: 1
+    qa: APPROVED
+  - shot_id: SHOT-02-STRAIGHT
+    file: shot-02-straight.png
+    prompt_version: 1
+    qa: APPROVED
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    file: shot-03-medium-close.png
+    prompt_version: 1
+    qa: APPROVED
+known_limitations:
+  - demo fictional product; not a client asset
+lineage:
+  brief: brief/product-brief.yaml
+  plan: plan/shot-plan.yaml

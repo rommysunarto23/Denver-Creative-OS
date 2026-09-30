@@ -1,0 +1,51 @@
+﻿# Sol retest QA artifact - do not overwrite delivered package
+# hermes_model: gpt-6.1-sol
+# reasoning_effort: high
+# hermes_session: 20260930_082631_315aee
+# written_at: 2026-09-30T16:28:28+08:00 (Asia/Makassar)
+job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-04
+candidate_path: "candidates/SHOT-02-STRAIGHT/Cand-04.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 5
+revision_round: 0
+source_path: source/product-reference.png
+retest:
+  kind: sol_high_escalation_shot02
+  hermes_model: gpt-6.1-sol
+  reasoning_effort: high
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6.1-sol
+  compared_to: source/product-reference.png
+  compare_composite: compare-shot-02-cand04.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: WARN
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: WARN
+blocking_violations:
+  - "Geometry: candidate legs appear slimmer relative to the body, with more pronounced outward splay than the source. Preservation of the source leg silhouette is not established."
+  - "Source fidelity: the candidate presents a wider, shallower-looking body face and a lighter supporting structure; the combined silhouette does not establish an authoritative product match."
+findings:
+  - "Independent reinspection of the composite and separate enlarged crops retains geometry BLOCK and decision REVISE."
+  - "Four legs are visible in both images. There is no observed leg-count violation; the geometry concern is proportions, shaft thickness, taper profile, and splay."
+  - "The source legs have more substantial upper shafts and a heavier supporting appearance. The candidate legs read as narrower, more sharply tapered supports with stronger outward lean, especially at the front feet."
+  - "The candidate body face appears lower in height relative to its width. The source is shown from an elevated three-quarter angle and the candidate from a near-frontal angle, so raw image ratios cannot establish exact physical dimensions."
+  - "The viewpoint difference explains changed top and side visibility and some projected leg spacing. It does not provide sufficient evidence to certify the remaining body and leg differences as perspective-only; fail-closed geometry therefore remains BLOCK."
+  - "The light wood block construction, prominent front knot, and dark wooden legs broadly track the reference. Candidate wood is warmer and its legs show brighter brown grain; differing illumination makes an exact finish mismatch uncertain."
+  - "The candidate satisfies the visible straight-shot intent with a centered, near-frontal presentation. The studio background, soft shadows, and foot contact are coherent."
+  - "No conspicuous extra components, fused legs, broken edges, or floating feet are visible at the supplied resolution. Rendering cleanliness does not resolve product-geometry fidelity."
+  - "The candidate is presentationally usable, but should not be released as an approved depiction of this source product while geometry and source fidelity remain blocked."
+  - "Changing the evaluator architecture, model, or reasoning effort alone does not flip this unchanged candidate to geometry PASS. This High re-QA retains the prior reported BLOCK / REVISE outcome."
+decision: REVISE
+revision_instruction: "Revise the product geometry, not just lighting or finish. Restore the source's more substantial leg thickness, taper profile, and less pronounced outward splay; resolve the apparent body-face height-to-width discrepancy. Preserve four distinct legs and the straight-shot composition. Validate against a camera-matched source view or source-constrained reprojection before approving; do not infer exact dimensions from unmatched image ratios."
+human_decision: ""
+geometry_drift: true
+borderline_note: "Geometry remains BLOCK, not a clean borderline PASS. Camera differences limit dimensional certainty, but do not establish fidelity under fail-closed review. High escalation was warranted to reassess that ambiguity and has now been completed without overturning the block. Further model-only escalation is not a substitute for revised geometry or camera-matched evidence."
+

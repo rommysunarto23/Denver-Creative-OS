@@ -1,0 +1,35 @@
+﻿# Secrets / env
+.env
+.env.*
+auth.json
+**/auth.json
+
+# Hermes local / secrets surfaces
+.hermes-local/
+hermes.secrets*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Temp / logs
+*.tmp
+*.log
+*.swp
+*~
+
+# Job demo outputs are intentional proof — track them.
+# Ignore only scratch/temp under jobs if added later.
+jobs/**/*.tmp
+jobs/**/scratch/
+# Editor / IDE
+.vscode/
+.idea/
+*.code-workspace

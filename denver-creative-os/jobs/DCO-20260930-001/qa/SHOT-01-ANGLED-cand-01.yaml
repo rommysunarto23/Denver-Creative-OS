@@ -1,0 +1,35 @@
+job_id: DCO-20260930-001
+candidate_id: SHOT-01-ANGLED-cand-01
+candidate_path: "candidates/SHOT-01-ANGLED/ChatGPT Image Sep 30, 2026, 09_14_19 AM.png"
+shot_id: SHOT-01-ANGLED
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  hermes_session: 20260930_012241_009c70
+  compared_to: source/product-reference.png
+  also_inspected_via: Read-tool image description on box copy
+criteria:
+  source_fidelity: PASS
+  geometry: PASS
+  material_color: PASS
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: PASS
+blocking_violations: []
+findings:
+  - Box-shaped light-wood body and four dark slender tapered outward-angled legs clearly visible.
+  - Two-tone materials and compact side-table proportions preserved; no drawers/shelves/metal redesign.
+  - Full silhouette in three-quarter lifestyle view with coherent lighting and contact shadows.
+  - Props (plant, books) secondary; product remains hero.
+decision: APPROVE
+revision_instruction: ""
+human_decision: APPROVED
+qa_at: 2026-09-30T09:23:39+08:00
+human_approved_at: 2026-09-30T15:48:41+08:00
+human_approval_note: "Operator APPROVE with SHOT-02 override package. Hermes decision was already APPROVE. No geometry_drift."

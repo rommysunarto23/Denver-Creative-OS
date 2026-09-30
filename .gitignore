@@ -1,0 +1,33 @@
+# Secrets / env / auth
+.env
+.env.*
+!.env.example
+auth.json
+**/auth.json
+*.pem
+*.key
+id_rsa
+id_ed25519
+hermes.secrets*
+.hermes-local/
+cloudflared*.json
+**/cloudflared*token*
+*.token
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Temp / logs
+*.tmp
+*.log
+*.swp
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+*.code-workspace

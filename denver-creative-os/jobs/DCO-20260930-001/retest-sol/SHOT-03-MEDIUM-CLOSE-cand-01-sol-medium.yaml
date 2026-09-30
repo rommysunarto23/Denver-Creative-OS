@@ -1,0 +1,48 @@
+﻿# Sol retest QA artifact - do not overwrite delivered package
+# hermes_model: gpt-6.1-sol
+# reasoning_effort: medium
+# hermes_session: 20260930_082518_c28b05
+# written_at: 2026-09-30T16:28:28+08:00 (Asia/Makassar)
+job_id: DCO-20260930-001
+candidate_id: SHOT-03-MEDIUM-CLOSE-cand-01
+candidate_path: "candidates/SHOT-03-MEDIUM-CLOSE/ChatGPT Image Sep 30, 2026, 09_16_32 AM.png"
+shot_id: SHOT-03-MEDIUM-CLOSE
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+retest:
+  kind: sol_medium_apple_to_apple
+  hermes_model: gpt-6.1-sol
+  reasoning_effort: medium
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6.1-sol
+  compared_to: source/product-reference.png
+  compare_composite: compare-shot-03.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: WARN
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: BLOCK
+blocking_violations:
+  - "The candidate replaces the source's visibly laminated, patchwork wood construction with predominantly continuous horizontal grain and a prominent knot, changing product identity."
+  - "Visible candidate legs are substantially heavier and less slenderly tapered than the source legs; the foreground leg reads as a broad support rather than the source's narrow tapered leg."
+findings:
+  - "The light wood body and dark wood legs retain the source's general color separation, but the candidate body is warmer and more uniformly golden."
+  - "The candidate's left body boundary and foreground leg foot are outside the frame. Full body height-to-width ratio, total leg count, and complete leg lengths cannot be verified; these are not treated as proven structural defects."
+  - "Perspective and close framing affect apparent proportions, but do not adequately resolve the visible leg-profile mismatch under fail-closed review."
+  - "The medium-close composition emphasizes the wood body and leg detail and is consistent with the named shot; the full v1 prompt was not supplied."
+  - "Warm directional light, surface highlights, visible floor contact, and background depth appear coherent."
+  - "No obvious floating props, impossible intersections, or malformed visible surfaces are apparent at the supplied image scale."
+  - "The image is visually polished, but inaccurate construction and leg geometry make it unsuitable as a faithful commercial depiction of the reference product."
+decision: REVISE
+revision_instruction: "Restore the reference's laminated wood block pattern, pale wood coloration, and narrow tapered dark legs. Match leg thickness, taper, attachment positions, and splay to the source rather than substituting heavier supports. Preserve the medium-close lifestyle treatment, but provide an uncropped validation view alongside the revised shot so body proportions and all four legs can be checked."
+human_decision: ""
+geometry_drift: true
+borderline_note: "Geometry is not a borderline PASS on the available evidence: visible leg thickness and taper warrant BLOCK. Cropping prevents complete proportion and leg-count verification. High escalation is not required to request revision; it is warranted if perspective is offered as grounds to overturn the geometry BLOCK."
+

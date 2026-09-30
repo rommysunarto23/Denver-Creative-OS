@@ -1,0 +1,49 @@
+﻿# Sol retest QA artifact - do not overwrite delivered package
+# hermes_model: gpt-6.1-sol
+# reasoning_effort: medium
+# hermes_session: 20260930_082352_363a8f
+# written_at: 2026-09-30T16:28:28+08:00 (Asia/Makassar)
+job_id: DCO-20260930-001
+candidate_id: SHOT-02-STRAIGHT-cand-04
+candidate_path: "candidates/SHOT-02-STRAIGHT/Cand-04.png"
+shot_id: SHOT-02-STRAIGHT
+prompt_version: 5
+revision_round: 0
+source_path: source/product-reference.png
+retest:
+  kind: sol_medium_apple_to_apple
+  hermes_model: gpt-6.1-sol
+  reasoning_effort: medium
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6.1-sol
+  compared_to: source/product-reference.png
+  compare_composite: compare-shot-02-cand04.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: WARN
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: BLOCK
+blocking_violations:
+  - "geometry: Candidate legs have visibly stronger outward splay and finer foot ends than the source; the stance and taper do not faithfully preserve the reference structure."
+  - "source_fidelity: Candidate body appears shallower relative to its front-face width, contributing to a changed product silhouette."
+findings:
+  - "Four legs are visible in both images; no leg-count violation is evident."
+  - "The source's three-quarter view and candidate's frontal view explain differences in side visibility and overlap, but do not sufficiently explain the stronger candidate leg splay."
+  - "Candidate front legs read as more slender and sharply tapered toward the feet; source legs retain a heavier, more upright appearance."
+  - "Candidate front-face height-to-width appears lower than the source. This comparison is less certain than the leg discrepancy because the source is viewed obliquely."
+  - "Light laminated wood construction and dark wooden legs are retained, with recognizable front-face grain features. Candidate wood appears warmer and legs lighter; differing illumination limits certainty about actual color drift."
+  - "Candidate is centered and straight-on, with the complete product visible against a neutral studio background."
+  - "Soft lighting, floor contact, and restrained shadows are coherent. No obvious floating feet, malformed joins, or conspicuous generative artifacts are visible at the supplied resolution."
+  - "Presentation quality is commercially suitable, but reference-geometry discrepancies prevent use as a faithful product image."
+decision: REVISE
+revision_instruction: "Retain the straight-on camera, neutral background, and soft lighting. Restore the source's heavier leg profiles, less aggressive taper, and more upright stance. Match the source body height-to-width using perspective-aware comparison rather than copying projected dimensions. Preserve the laminated wood appearance and reference grain landmarks; recheck all four leg attachments and floor contacts."
+human_decision: ""
+geometry_drift: true
+borderline_note: "Geometry is BLOCK, not a borderline PASS, primarily because of leg splay and taper. Body proportion drift is less certain because of perspective. High escalation is warranted if disputing the geometry block or seeking approval without revision; the current fail-closed decision remains REVISE."
+

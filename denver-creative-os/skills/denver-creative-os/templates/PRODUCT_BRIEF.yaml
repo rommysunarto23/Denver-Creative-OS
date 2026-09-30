@@ -1,0 +1,16 @@
+﻿# Template / example shape for brief/product-brief.yaml
+# Required keys validated by docs/scripts/check_skill_templates.ps1
+
+job_id: DCO-YYYYMMDD-001
+product_label: ""
+product_class: ""          # e.g. bed, sofa, table, shelving
+source_path: source/product-reference.png
+known_facts: []            # operator-confirmed only
+inferences: []             # labeled guesses; not treated as facts
+must_preserve: []          # hard constraints (silhouette, structure, material, color, hardware)
+flexible_styling: []       # soft: decor, wall, greenery, non-product textiles
+unknowns: []               # questions for NEEDS_INPUT
+target_audience: ""
+desired_visual_world: ""
+commercial_use: catalog-lifestyle
+status: DRAFT              # DRAFT | READY_FOR_APPROVAL | BRIEF_APPROVED

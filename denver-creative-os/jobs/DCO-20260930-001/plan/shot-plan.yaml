@@ -1,0 +1,47 @@
+﻿job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+shots:
+  - shot_id: SHOT-01-ANGLED
+    shot_type: angled
+    camera_framing: three-quarter angled view showing depth, top/body plane, and primary silhouette
+    purpose: hero lifestyle angle for catalog/listing
+    must_show:
+      - full table silhouette including all four dark tapered legs
+      - thick light-wood box body readable
+      - two-tone light body / dark legs relationship
+    constraints:
+      - preserve four dark tapered outward-angled legs and compact proportions
+      - no redesign of silhouette; do not invent drawers/shelves
+      - product remains the clear hero; props secondary
+    prompt_slug: shot-01-angled
+    prompt_version: 1
+  - shot_id: SHOT-02-STRAIGHT
+    shot_type: straight
+    camera_framing: straight-on front elevation, centered, minimal perspective distortion
+    purpose: clear front read of proportions and symmetry
+    must_show:
+      - front elevation of compact vertically deep slab body and leg spacing
+      - left-right symmetry of dark tapered stick/dowel legs
+      - accurate height-to-width proportion (body height ~1/3-2/5 of product) and two-tone contrast
+    constraints:
+      - no extreme wide-angle warp
+      - preserve four dark pencil-thin legs + light compact body; no wide console / post legs
+      - plain studio / solid floor or black void this revise (no rug/sofa clutter)
+    prompt_slug: shot-02-straight
+    prompt_version: 5
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    shot_type: medium-close
+    camera_framing: medium-close detail on body edge/corner and upper leg join region
+    purpose: material/finish confidence for commercial use
+    must_show:
+      - light wood grain / finish family on the thick body
+      - dark tapered upper-leg relationship to the body
+      - believable wood surface (not plastic melt)
+    constraints:
+      - no redesign of joinery; do not invent hardware/drawers
+      - do not crop so aggressively that product class is unclear
+      - keep two-tone color families locked
+    prompt_slug: shot-03-medium-close
+    prompt_version: 1
+status: REVISION_REQUIRED
+note: SHOT-02 prompt_version bumped to 5 after operator chose strategy rewrite (numeric ratios; drop thick-body tension; plain studio/void) then cand-04 drop.

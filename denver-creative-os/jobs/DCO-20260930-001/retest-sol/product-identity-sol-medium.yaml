@@ -1,0 +1,55 @@
+﻿# Fresh Sol Medium intake (source only) - retest
+# hermes_model: gpt-6.1-sol
+# reasoning_effort: medium
+# hermes_session: 20260930_081922_4a7d7c
+# qa_at_zone: Asia/Makassar
+# generated: 2026-09-30T16:20:34+08:00
+job_id: DCO-20260930-001
+product_label: Fictional Oak Side Table
+product_class: side-table
+source_path: source/product-reference.png
+known_facts:
+  - "The reference shows one unstyled table against a black background, viewed from above at a three-quarter angle."
+  - "The upper body is a substantial rectangular block with a flat top and straight-sided vertical faces."
+  - "The top and body have a light honey-tan wood appearance, with visible grain, darker marks, and patchwork tonal variation."
+  - "Four long, narrow, dark brown legs are visible beneath the body."
+  - "The legs extend outward slightly toward the floor."
+  - "No handles, drawer divisions, open shelves, or decorative hardware are visible on the shown faces."
+inferences:
+  - "The footprint appears approximately square, rather than elongated like a console."
+  - "The contrasting light body and dark legs suggest a deliberately two-tone design."
+  - "The simple block body and slender, slightly splayed legs suggest modern or mid-century-influenced styling."
+  - "The wood surface resembles joined strips or blocks; actual construction cannot be confirmed from the image."
+must_preserve:
+  - "The compact, approximately square footprint and substantial block-like upper body."
+  - "The flat top, straight body faces, and clean silhouette without added visible handles or openings."
+  - "Four slender legs with slight outward splay and subtle taper toward the feet."
+  - "The strong light-body versus dark-leg color contrast."
+  - "The natural-looking grain and irregular tonal variation across the body."
+  - "The long exposed legs relative to the shorter upper body."
+flexible_styling:
+  - "Background, room setting, lighting, and camera placement may change without altering product identity."
+  - "Restrained props may be introduced for catalog-lifestyle use, provided they do not obscure the body or leg geometry."
+  - "Surrounding decor and palette may complement the visible wood tones without implying unverified product specifications."
+unknowns:
+  - "Actual wood species; oak is supplied in the fictional product label but is not visually verified."
+  - "Exact dimensions, weight, and measured proportions."
+  - "Whether the body is solid wood, veneer, engineered wood, or another material."
+  - "Whether the legs are wood or another material with a wood-like finish."
+  - "Exact leg cross-section, joinery, attachment method, and finish specification."
+  - "Whether any concealed storage, rear openings, or underside features exist."
+  - "Manufacturer, client SKU, price, load capacity, and production availability."
+  - "Client-confirmed target audience and visual direction."
+target_audience: "Inferred: shoppers seeking a compact accent table with natural wood character and a simple modern silhouette; no audience is established by the source."
+desired_visual_world: "Inferred styling direction: a restrained residential setting with neutral surroundings and soft light that reveal the wood variation, two-tone contrast, and slender legs; the source itself provides no lifestyle setting."
+commercial_use: catalog-lifestyle
+status: RETEST_SOL_BRIEF
+geometry_notes:
+  body_height_ratio_vs_full_product: "Approximately ~1/3 of the full visible product height; perspective-based estimate, not a measured dimension."
+  body_width_character: "Compact and square-ish in apparent footprint, with a broad rectangular front face; not console-wide."
+  leg_character: "Four slender stick-like legs, subtly tapered toward the feet and slightly outward-splayed; exact cross-section is unclear."
+  two_tone: "Light honey-tan wood-appearing top and body contrasted with very dark brown wood-appearing legs."
+retest:
+  hermes_model: gpt-6.1-sol
+  reasoning_effort: medium
+  note: Fresh Sol Medium intake from source only; do not reference prior luna brief wording.

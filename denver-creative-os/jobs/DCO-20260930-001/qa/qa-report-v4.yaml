@@ -1,0 +1,73 @@
+# Consolidated QA v4 - DCO-20260930-001 (SHOT-02 Cand-04 / strategy rewrite v5 / revision round 4)
+# Fail-closed: any BLOCK on source_fidelity or geometry => REVISE for that shot.
+# Prior: qa-report-v1 (cand-01), v2 (cand-02), v3 (Cand-03). This report covers Cand-04 only + gate status.
+# Same fail family as cand-01/02/03 => do NOT auto-write v6; operator decision required.
+
+job_id: DCO-20260930-001
+report_id: qa-report-v4
+revision_round: 4
+prompt_version_under_test: 5
+strategy: rewrite_v5_then_cand04
+source_path: source/product-reference.png
+qa_at: 2026-09-30T15:43:05+08:00
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6-luna
+  sessions:
+    SHOT-02-STRAIGHT-cand-04: 20260930_074206_a40aa0
+candidates_verified:
+  - shot_id: SHOT-02-STRAIGHT
+    filename: Cand-04.png
+    present: true
+    dimensions: 1254x1254
+    prior_files_retained:
+      - "ChatGPT Image Sep 30, 2026, 09_14_38 AM.png"
+      - cand-02.png
+      - Cand-03.png
+
+shots:
+  - shot_id: SHOT-01-ANGLED
+    candidate_id: SHOT-01-ANGLED-cand-01
+    qa_file: qa/SHOT-01-ANGLED-cand-01.yaml
+    note: unchanged from qa-report-v1; Hermes APPROVE recommend; human_decision empty
+    decision: APPROVE
+    human_decision: ""
+  - shot_id: SHOT-02-STRAIGHT
+    candidate_id: SHOT-02-STRAIGHT-cand-04
+    qa_file: qa/SHOT-02-STRAIGHT-cand-04.yaml
+    prompt_version: 5
+    criteria:
+      source_fidelity: BLOCK
+      geometry: BLOCK
+      material_color: PASS
+      shot_compliance: PASS
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: WARN
+    blocking_violations:
+      - Body too wide and shallow vs compact vertically deep source slab
+      - Body height below required 1/3-2/5 of full product height
+      - Legs too thick / insufficiently tapered vs slender stick/dowel source
+    decision: REVISE
+    human_decision: ""
+    fail_family: same_as_cand01_02_03_wide_body_thick_legs
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    candidate_id: SHOT-03-MEDIUM-CLOSE-cand-01
+    qa_file: qa/SHOT-03-MEDIUM-CLOSE-cand-01.yaml
+    note: unchanged from qa-report-v1; Hermes APPROVE recommend; human_decision empty
+    decision: APPROVE
+    human_decision: ""
+
+summary:
+  hermes_recommend_approve:
+    - SHOT-01-ANGLED
+    - SHOT-03-MEDIUM-CLOSE
+  revise_required:
+    - SHOT-02-STRAIGHT
+  overall_gate: NEEDS_OPERATOR_DECISION
+  revision_cycle: 4
+  auto_v6: false
+  auto_v6_reason: "Fail is same family as cand-01/02/03 (wide/shallow body + thick legs), not new/different. Strategy rewrite v5 already applied. Operator must choose override vs another rewrite."
+  note: "SHOT-02 Cand-04 fail-closed (source_fidelity BLOCK + geometry BLOCK). Scene cleanup from v5 succeeded (plain studio). Product proportions still wrong. No PACKAGE. No human APPROVE. No auto v6."

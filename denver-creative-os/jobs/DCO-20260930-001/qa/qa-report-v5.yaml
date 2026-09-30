@@ -1,0 +1,66 @@
+# Consolidated QA v5 - DCO-20260930-001 operator override + package
+# Not a new vision pass. No Image API. Hermes fail-closed scores are unchanged.
+# Human set human_decision APPROVED (operator command: APPROVE) on the three winners only.
+
+job_id: DCO-20260930-001
+report_id: qa-report-v5
+revision_round: 4
+qa_at: 2026-09-30T15:48:41+08:00
+kind: operator_override_package
+source_path: source/product-reference.png
+evidence:
+  method: operator_decision_on_prior_hermes_qa
+  prior_reports:
+    - qa/qa-report-v1.yaml
+    - qa/qa-report-v2.yaml
+    - qa/qa-report-v3.yaml
+    - qa/qa-report-v4.yaml
+  new_vision_pass: false
+  image_api: false
+
+shot_02_choice:
+  chosen: Cand-04
+  chosen_path: candidates/SHOT-02-STRAIGHT/Cand-04.png
+  prompt_version: 5
+  alternative_considered: Cand-03
+  alternative_path: candidates/SHOT-02-STRAIGHT/Cand-03.png
+  geometry_drift: true
+  why: "Prefer Cand-04 for scene/studio (plain studio, no rug/sofa; v5 scene strategy landed). Cand-03 is not closer commercially: both commercial_usability WARN, and Cand-03 keeps a prominent rug that the current SHOT-02 plan forbids."
+
+shots:
+  - shot_id: SHOT-01-ANGLED
+    candidate_id: SHOT-01-ANGLED-cand-01
+    qa_file: qa/SHOT-01-ANGLED-cand-01.yaml
+    hermes_decision: APPROVE
+    human_decision: APPROVED
+    geometry_drift: false
+  - shot_id: SHOT-02-STRAIGHT
+    candidate_id: SHOT-02-STRAIGHT-cand-04
+    qa_file: qa/SHOT-02-STRAIGHT-cand-04.yaml
+    prompt_version: 5
+    hermes_decision: REVISE
+    human_decision: APPROVED
+    operator_override: true
+    geometry_drift: true
+    criteria_unchanged:
+      source_fidelity: BLOCK
+      geometry: BLOCK
+      material_color: PASS
+      shot_compliance: PASS
+      lighting_shadow: PASS
+      scene_integration: PASS
+      ai_artifacts: PASS
+      commercial_usability: WARN
+  - shot_id: SHOT-03-MEDIUM-CLOSE
+    candidate_id: SHOT-03-MEDIUM-CLOSE-cand-01
+    qa_file: qa/SHOT-03-MEDIUM-CLOSE-cand-01.yaml
+    hermes_decision: APPROVE
+    human_decision: APPROVED
+    geometry_drift: false
+
+summary:
+  overall_gate: PACKAGED
+  package_status: PACKAGE_DONE
+  delivery_status: DELIVERED
+  operator_override_reason: "Fail-closed geometry failed 4x; GPT Image primary cause."
+  note: "Operator override B. SHOT-02 Hermes decision remains REVISE. Human APPROVED Cand-04 with geometry_drift true. No v6. No DCO-4. incremental_image_api_spend_usd stays 0."

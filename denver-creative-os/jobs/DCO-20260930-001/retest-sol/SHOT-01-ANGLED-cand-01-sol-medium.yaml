@@ -1,0 +1,50 @@
+﻿# Sol retest QA artifact - do not overwrite delivered package
+# hermes_model: gpt-6.1-sol
+# reasoning_effort: medium
+# hermes_session: 20260930_082223_0503f6
+# written_at: 2026-09-30T16:28:28+08:00 (Asia/Makassar)
+job_id: DCO-20260930-001
+candidate_id: SHOT-01-ANGLED-cand-01
+candidate_path: "candidates/SHOT-01-ANGLED/ChatGPT Image Sep 30, 2026, 09_14_19 AM.png"
+shot_id: SHOT-01-ANGLED
+prompt_version: 1
+revision_round: 0
+source_path: source/product-reference.png
+retest:
+  kind: sol_medium_apple_to_apple
+  hermes_model: gpt-6.1-sol
+  reasoning_effort: medium
+evidence:
+  method: hermes_vision
+  hermes_provider: openai-codex
+  hermes_model: gpt-6.1-sol
+  compared_to: source/product-reference.png
+  compare_composite: compare-shot-01.png
+criteria:
+  source_fidelity: BLOCK
+  geometry: BLOCK
+  material_color: WARN
+  shot_compliance: PASS
+  lighting_shadow: PASS
+  scene_integration: PASS
+  ai_artifacts: PASS
+  commercial_usability: BLOCK
+blocking_violations:
+  - "Geometry: candidate legs appear substantially shorter relative to body width, producing a squatter overall silhouette than the source."
+ 
+  - "Geometry: candidate leg splay and taper do not faithfully preserve the source configuration; the candidate's left foreground leg is notably more outward-slanted."
+  - "Source fidelity: pale, visibly block-laminated wood is replaced by warmer wood with prominent continuous grain and knots."
+findings:
+  - "Both images show a rectangular wooden body supported by four dark legs; leg count is preserved."
+  - "The broad product category is retained, but the silhouette and wood construction appearance are not sufficiently faithful for source-controlled approval."
+  - "Perspective differs between images, limiting precise dimensional comparison; it does not adequately account for the apparent leg-to-body proportion change."
+  - "The candidate provides an angled three-quarter view with the complete product and all four feet visible. Shot compliance is assessed against the supplied angled-shot designation only."
+  - "Warm daylight, plausible contact shadows, and placement beside the sofa integrate the candidate convincingly into the room."
+  - "No obvious extra legs, broken surfaces, floating props, or other conspicuous generation artifacts are visible at the supplied resolution."
+  - "The image is visually suitable as lifestyle photography, but product misrepresentation prevents commercial approval for this source."
+decision: REVISE
+revision_instruction: "Preserve the source product rather than redesigning it. Restore the source's taller leg-to-body proportions, leg thickness, taper, attachment positions, and splay. Match the pale block-laminated wood appearance and its segmented grain instead of continuous oak-like grain. Retain the angled composition and credible room lighting; keep the complete product and all four feet visible."
+human_decision: ""
+geometry_drift: true
+borderline_note: "Geometry is not a borderline PASS at this resolution: the apparent leg-to-body proportion and splay differences warrant BLOCK under fail-closed review. High escalation is not required to request revision; it is warranted if approval is pursued on the claim that perspective alone explains the differences."
+
