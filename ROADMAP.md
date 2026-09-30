@@ -1,6 +1,6 @@
-# ROADMAP.md — Denver Creative OS
+﻿# ROADMAP.md — Denver Creative OS
 
-**Updated:** 2026-09-30 (Asia/Makassar, UTC+8)  
+**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
 **Authority:** Rommy. Agents propose; they do not silently advance phases.
 
 ---
@@ -10,7 +10,7 @@
 | Fase | Status |
 |------|--------|
 | **V0** | **Done** — orchestrate + demo DELIVERED (honest geometry gap) |
-| **V0.2** | Design in SYNTHESIS; **fidelity contract reopen**; implement after ChatGPT final + Codex |
+| **V0.2 / V0.2-R1** | Ideal **V0.2-R1** in `V02_R1.md` pending Rommy approve; implement after approve + ChatGPT handoff + Codex |
 | **V0.1** | Identity lock **proof** (NOVEL_VIEW path) — after/with contract layer |
 | **Later** | Portal / email-WA / Image API (only if manual paths fail) |
 
@@ -34,11 +34,11 @@ Known non-goals completed-as-denied: no n8n/MCP/DB/VPS/browser auto/auto-approve
 
 ---
 
-## V0.2 — Fidelity contract reopen (next implement)
+## V0.2 / V0.2-R1 - Fidelity contract reopen (next implement)
 
-**Status:** Ideal V0.2 **designed** in `denver-creative-os/docs/architecture/SYNTHESIS.md`.  
-**Pending:** ChatGPT **final** sign-off + **Codex implement** (skill/templates/fixtures).  
-**This docs commit does not implement the skill patch.**
+**Status:** Ideal V0.2 dual-layer designed in `SYNTHESIS.md`; **Ideal V0.2-R1** (6 deltas) in `V02_R1.md` **recommended** over V0.2 as-is.
+**Pending:** Rommy **approve V0.2-R1** + ChatGPT **Codex coding handoff** + **Codex implement** (skill/templates/fixtures/composite helper).
+**This docs commit does not implement the skill patch.** Codex must wait.
 
 ### Contract layer (required)
 
@@ -49,22 +49,30 @@ Known non-goals completed-as-denied: no n8n/MCP/DB/VPS/browser auto/auto-approve
 - **No client-release override**; `EXPERIMENT_ACCEPTED` ≠ client-releasable.
 - Close demo contradiction: BLOCK + human approve must not become client `DELIVERED`/`RELEASE_ELIGIBLE`.
 
+### R1 hardenings (required before implement)
+
+- Generation lock = `DERIVED_RENDER` / stabilizer — **not** ground truth; cannot alone promote UNVERIFIABLE->PASS.
+- SOURCE_PRESERVE = **deterministic cutout raster composite** (product pixels owned by source; scene by generative).
+- `SHOT_FEASIBILITY_GATE` before generate; NOVEL_VIEW+INSUFFICIENT -> NEEDS_EVIDENCE.
+- Multidimensional release (`shot_compliance`, `evidence_sufficiency`, ...).
+- Fixtures **9/9** (POS/NEG/AMB x 3 Sol Medium); hard checkpoint return gate (see `V02_R1.md` Delta 6).
+
 ### Generation layer (paired, not instead-of)
 
 - Primary production mode: **`SOURCE_PRESERVE`**.
-- Secondary: **`NOVEL_VIEW_GENERATIVE`** with optional **identity lock** (see V0.1).
+- Secondary: **`NOVEL_VIEW_GENERATIVE`** with optional **generation lock / ``DERIVED_RENDER``** (see V0.1 / V0.2-R1 Delta 1).
 
 ### Exit criteria
 
-- POS / NEG / AMB fixtures pass on Sol Medium verification path.
-- Checkpoint text updated honestly only after fixtures 3/3.
+- POS / NEG / AMB x3 (9/9) fixtures pass on Sol Medium; SOURCE_PRESERVE E2E; override impossible; NOVEL_VIEW insufficient -> NEEDS_EVIDENCE.
+- Checkpoint text updated honestly only after R1 return gate (9/9 + SOURCE_PRESERVE E2E + override impossible + NEEDS_EVIDENCE path + Image API $0).
 - Still: no Image API, no browser auto, no auto client-release.
 
 ---
 
 ## V0.1 — Identity lock proof (generation EV)
 
-**Status:** Design adopted as Ideal V0.2 addon for NOVEL_VIEW; **proof trial not run**.
+**Status:** Design adopted as Ideal V0.2-R1 addon for NOVEL_VIEW with lock=`DERIVED_RENDER` (not ground truth); **proof trial not run**.
 
 Intent (from SYNTHESIS / COMPARE):
 
@@ -104,17 +112,21 @@ Only after V0.2 contract honesty and (as needed) V0.1 lock proof:
 
 ## Suggested next actions (human-gated)
 
-1. ChatGPT **final** on Ideal V0.2 contract text (if any delta vs SYNTHESIS).  
-2. Codex **implement** V0.2 skill + templates + POS/NEG/AMB fixtures (explicit task).  
-3. Run fixture verification; update checkpoint only if 3/3.  
-4. Optional: V0.1 lock/edit proof jobs (still manual Images).  
-5. Pitch proof pack (`PITCH_PREP_STUB.md`) only with honest experiment vs client-release language.
+1. Rommy **approve Ideal V0.2-R1** (`V02_R1.md`).
+2. ChatGPT produces **Codex coding handoff** (file-by-file).
+3. Codex **implement** V0.2-R1 skill + templates + POS/NEG/AMB x3 fixtures + SOURCE_PRESERVE composite helper (explicit task only).
+4. Run fixture verification; update checkpoint only if R1 return gate met.
+5. Optional: V0.1 lock/edit proof jobs (still manual Images; lock = stabilizer not ground truth).
+6. Pitch proof pack (`PITCH_PREP_STUB.md`) only with honest experiment vs client-release language.
 
 ---
 
 ## See also
 
-- `AGENTS.md` — DoD for the V0.2 patch  
+- `AGENTS.md` - DoD for the V0.2-R1 patch
 - `routing.md` — where to read  
 - `CONTEXT.md` — current facts  
-- `denver-creative-os/docs/architecture/SYNTHESIS.md` — Ideal V0.2 detail
+- `denver-creative-os/docs/architecture/V02_R1.md` - Ideal V0.2-R1; `SYNTHESIS.md` - V0.2 base
+
+
+

@@ -106,3 +106,18 @@ They are **orthogonal layers**, not rival "pick one" architectures. Shallow merg
 ## Compare verdict
 
 Grok B and ChatGPT v0.2 attack **different broken joints** of the same demo: B the **pixels**, ChatGPT the **contract that called drifted pixels deliverable**. Neither alone is Ideal V0.2. Prefer synthesis that stacks both layers — see updated `SYNTHESIS.md`.
+---
+
+## Postscript — Ideal V0.2-R1 (2026-09-30 ~17:36)
+
+ChatGPT decision paste (see `CHATGPT_V02_R1_NOTES.md` / `V02_R1.md`) **keeps** this orthogonal-layer compare, then hardens Ideal V0.2 with six deltas. Material compare impacts:
+
+| Layer | R1 change |
+|-------|-----------|
+| Generation (Grok B) | Identity lock reframed as **`DERIVED_RENDER` / generation stabilizer** — must **not** alone promote UNVERIFIABLE→PASS; novel geometry PASS needs original multi-view / measures / CAD / client evidence |
+| SOURCE_PRESERVE | Must be **raster-true**: generative owns scene; cutout owns product pixels; deterministic local composite (not whole-image repaint) |
+| Release (ChatGPT) | Multidimensional gate + early `SHOT_FEASIBILITY_GATE`; fixtures raised to **9/9** (3 paths × 3 Sol Medium) |
+| Pick | **Ideal V0.2-R1** recommended over V0.2 as-is; **Grok agrees**; Codex waits for Rommy approve + ChatGPT handoff |
+
+This file's "deep merge" thesis remains valid; R1 is that merge **plus** evidence-authority and raster-preservation constraints.
+

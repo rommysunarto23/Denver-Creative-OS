@@ -3,7 +3,7 @@
 **Audience:** Codex, Cursor, and other coding agents working in this repo.  
 **Operator:** Rommy (final authority).  
 **Language:** English agent contracts + short Indonesian (ID) operator summary.  
-**Updated:** 2026-09-30 (Asia/Makassar, UTC+8)
+**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
 
 > Pointer files: `AGENT.md` → this file. Router: `routing.md` (see also `ROUTER.md`).
 
@@ -13,9 +13,9 @@
 
 - Outcome produk: cutout furniture/PPH → ≥3 shot lifestyle studio enterprise.
 - Hermes orkestrasi; ChatGPT Images = human V0; Rommy final authority.
-- Ideal **V0.2** = evidence-aware fidelity + `SOURCE_PRESERVE` primary + optional identity lock untuk `NOVEL_VIEW` — **pending ChatGPT final + Codex implement**.
+- Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **pending Rommy approve**; Codex waits for approve + ChatGPT handoff. See `docs/architecture/V02_R1.md`.
 - **Jangan** Image API / browser auto / auto client-release.
-- Baca dulu: `routing.md` → `CONTEXT.md` → architecture Ideal V0.2.
+- Baca dulu: `routing.md` -> `CONTEXT.md` -> architecture **Ideal V0.2-R1** (`V02_R1.md`); V0.2 base masih di `SYNTHESIS.md`.
 
 ---
 
@@ -56,10 +56,11 @@ Under `denver-creative-os/docs/architecture/`:
 
 | Doc | Why |
 |-----|-----|
-| **`SYNTHESIS.md`** | **Ideal V0.2** merge verdict (authoritative design intent) |
-| **`COMPARE_GROK_CHATGPT.md`** | Orthogonal layers: generation (Grok B) vs release/QA (ChatGPT) |
-| **`GROUNDING.md`** | How the live V0 loop actually works + fidelity imbalance census |
-| `CANDIDATES.md` / `CHATGPT_AUDIT_NOTES.md` | Inputs to the merge; audit of geometry-override contradiction |
+| **`V02_R1.md`** | **Ideal V0.2-R1** (authoritative pending approve) — 6 deltas + Grok stance |
+| `SYNTHESIS.md` | Ideal V0.2 dual-layer base (superseded by R1 pending approve) |
+| `COMPARE_GROK_CHATGPT.md` | Orthogonal layers: generation (Grok B) vs release/QA (ChatGPT); R1 postscript |
+| `GROUNDING.md` | How the live V0 loop actually works + fidelity imbalance census |
+| `CHATGPT_V02_R1_NOTES.md` / `CHATGPT_AUDIT_NOTES.md` / `CANDIDATES.md` | R1 paste summary; prior audit; candidates |
 
 Also: `denver-creative-os/docs/CURRENT_CHECKPOINT.md`, `MODEL_ARCHITECTURE_V0.md`, `PROVIDER_GATE.md`.
 
@@ -69,14 +70,16 @@ Demo lessons: `jobs/DCO-20260930-001/` especially `OPERATOR_NEXT.md`, `delivery/
 
 ---
 
-## Ideal V0.2 (design — implement only when Rommy/ChatGPT final says go)
+## Ideal V0.2-R1 (design — implement only after Rommy approve + ChatGPT handoff)
 
-**Status:** Pending **ChatGPT final** + **Codex implement**. Do **not** invent a partial skill patch without an explicit task.
+**Status:** Ideal **V0.2-R1** recommended over V0.2 as-is — **pending Rommy approve**. Codex must **wait** for approve + **ChatGPT coding handoff**. Do **not** invent a partial skill patch without an explicit task.
 
-Dual layer (not either-or):
+Base dual layer (Ideal V0.2 — still required):
 
-1. **Evidence-aware fidelity / release triad** (ChatGPT): `evidence` → `verdict` (PASS/FAIL/UNVERIFIABLE) → `release` (ELIGIBLE/BLOCKED/NEEDS_EVIDENCE); `view_support`; `product_truth` vs `generation_guardrails`; `presentation_quality` ≠ `product_fidelity`; **no client-release override** (`EXPERIMENT_ACCEPTED` ≠ client-releasable).
-2. **Generation contract** (Grok B): primary path **`SOURCE_PRESERVE`** (cutout plate authority); optional **identity lock + proportion gate + edit/relight** for **`NOVEL_VIEW`**.
+1. **Evidence-aware fidelity / release triad** (ChatGPT): `evidence` -> `verdict` (PASS/FAIL/UNVERIFIABLE) -> `release` (ELIGIBLE/BLOCKED/NEEDS_EVIDENCE); `view_support`; `product_truth` vs `generation_guardrails`; `presentation_quality` != `product_fidelity`; **no client-release override** (`EXPERIMENT_ACCEPTED` != client-releasable).
+2. **Generation contract** (Grok B): primary path **`SOURCE_PRESERVE`** (cutout plate authority); optional **generation lock + proportion gate + edit/relight** for **`NOVEL_VIEW`**.
+
+**R1 deltas** (see `V02_R1.md`): lock = `DERIVED_RENDER` not ground truth; SOURCE_PRESERVE = deterministic product-raster composite; `SHOT_FEASIBILITY_GATE`; multidimensional release; fixtures 9/9; hard checkpoint return.
 
 Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without rewriting QA facts**.
 
@@ -85,7 +88,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 ## Do
 
 - Follow `routing.md` before large edits.
-- Prefer docs + skill/templates/fixtures changes that match Ideal V0.2 when the patch task is explicit.
+- Prefer docs + skill/templates/fixtures changes that match **Ideal V0.2-R1** when the patch task is explicit (after approve + handoff).
 - Keep generation mode `MANUAL_CHATGPT_IMAGES`; `incremental_image_api_spend_usd: 0`.
 - Preserve immutable `source/product-reference.png` (never overwrite).
 - Version prompts (`*-vN.md`); never silent overwrite of QA history.
@@ -95,7 +98,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 
 ## Do not
 
-- Implement Ideal V0.2 skill patch unless the user/task explicitly asks (this docs-only task does **not**).
+- Implement Ideal V0.2 / V0.2-R1 skill patch unless Rommy approved R1, ChatGPT handoff exists, and the user/task explicitly asks (this docs-only task does **not**).
 - Call or enable **Image API** / paid image generation.
 - **Browser-automate** ChatGPT Images UI.
 - **Auto client-release** or auto-approve (Hermes recommends only).
@@ -108,13 +111,13 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 
 ## Definition of done — next fidelity patch (Ideal V0.2 skill)
 
-When (and only when) tasked to implement V0.2:
+When (and only when) tasked to implement V0.2-R1 after approve + handoff:
 
 1. Skill + `references/` + `templates/` encode evidence-aware triad + `SOURCE_PRESERVE` / `NOVEL_VIEW` modes + no client-release override.
-2. Optional identity-lock procedure gated for `NOVEL_VIEW` / insufficient evidence (not forced on every `SOURCE_PRESERVE` shot).
+2. Optional generation-lock (`DERIVED_RENDER`, not ground truth) gated for `NOVEL_VIEW` / insufficient evidence; SOURCE_PRESERVE uses deterministic cutout composite (not forced lock on every shot).
 3. Override / experiment ledger cannot produce client `DELIVERED` / `RELEASE_ELIGIBLE` on critical FAIL or unresolved UNVERIFIABLE.
-4. **POS / NEG / AMB** contract fixtures exist and pass verification on Sol Medium path (see Verify).
-5. Checkpoint / roadmap text updated honestly (reopen closed only after fixtures 3/3).
+4. **POS / NEG / AMB × 3 Sol Medium repeats (9/9)** contract fixtures exist and pass (see Verify).
+5. Checkpoint / roadmap text updated honestly (reopen closed only after R1 return gate: 9/9 + SOURCE_PRESERVE E2E + override impossible + NEEDS_EVIDENCE path + Image API $0).
 6. No Image API, no browser auto, no auto-approve.
 7. Secret scan clean; commit message states contract scope.
 
@@ -156,3 +159,8 @@ Until POS/NEG/AMB fixtures are added under the skill tree (planned with V0.2), t
 - `CONTEXT.md` — current repo/runtime state  
 - `ROADMAP.md` — V0 → V0.2 → later  
 - `routing.md` — read order + decision tree + when to stop and ask  
+
+
+
+
+

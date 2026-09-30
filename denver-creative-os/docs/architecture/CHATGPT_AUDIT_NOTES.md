@@ -158,3 +158,10 @@ Recommend **approve** Evidence-Aware Three-Path Fidelity Contract v0.2 + source-
 - Does **not** approve or reject the patch; that is operator/Rommy authority.
 - Does **not** implement code, enable Image API, or change checkpoint status.
 - Grok Candidate B comparison lives in `COMPARE_GROK_CHATGPT.md`; merge in `SYNTHESIS.md`.
+
+---
+
+## Follow-on paste (Ideal V0.2-R1)
+
+Operator later pasted ChatGPT's **Ideal V0.2-R1** decision (does not approve V0.2 as-is; six deltas). Summary: `CHATGPT_V02_R1_NOTES.md`. Canonical design: `V02_R1.md`. This audit file remains the original Three-Path contract paste @ `86772cf`.
+

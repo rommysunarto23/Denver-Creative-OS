@@ -3,14 +3,14 @@
 **Purpose:** Router for Codex, Cursor, Hermes operators, and humans.  
 **Canonical name:** `routing.md` (https://routing.md citation → this file).  
 **Pointer:** `ROUTER.md` → this file.  
-**Updated:** 2026-09-30 (Asia/Makassar, UTC+8)
+**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
 
 ---
 
 ## ID ringkas
 
 1. Mulai di sini → `AGENTS.md` → `CONTEXT.md`.  
-2. Fidelity / Ideal V0.2 → `denver-creative-os/docs/architecture/SYNTHESIS.md`.  
+2. Fidelity / Ideal V0.2-R1 -> `denver-creative-os/docs/architecture/V02_R1.md` (base: `SYNTHESIS.md`).
 3. Skill prosedur → `skills/denver-creative-os/SKILL.md`.  
 4. Bukti demo / pelajaran override → `jobs/DCO-20260930-001/`.  
 5. Ragu spend / API / release → **STOP, tanya Rommy**.
@@ -24,9 +24,10 @@
 2. AGENTS.md           (do / don't / DoD / verify)
 3. CONTEXT.md          (what is true right now)
 4. ROADMAP.md          (what is next vs later)
-5. denver-creative-os/docs/architecture/SYNTHESIS.md   # Ideal V0.2
-6. denver-creative-os/docs/architecture/COMPARE_GROK_CHATGPT.md
-7. denver-creative-os/docs/architecture/GROUNDING.md
+5. denver-creative-os/docs/architecture/V02_R1.md          # Ideal V0.2-R1 (pending approve)
+6. denver-creative-os/docs/architecture/SYNTHESIS.md        # Ideal V0.2 dual-layer base
+7. denver-creative-os/docs/architecture/COMPARE_GROK_CHATGPT.md
+8. denver-creative-os/docs/architecture/GROUNDING.md
 ```
 
 Then deepen by task type (decision tree below).
@@ -52,13 +53,14 @@ What is the task about?
 │    → PRD_DENVER_CREATIVE_OS.md
 │    → DENVER_CREATIVE_OS_ARCHITECTURE_AND_REPO_BLUEPRINT.md
 │
-├─ Fidelity architecture / Ideal V0.2 / release honesty
-│    → docs/architecture/SYNTHESIS.md          # authoritative merge
+├─ Fidelity architecture / Ideal V0.2-R1 / release honesty
+    -> docs/architecture/V02_R1.md              # Ideal V0.2-R1 (authoritative pending approve)
+    -> docs/architecture/SYNTHESIS.md          # Ideal V0.2 dual-layer base
 │    → docs/architecture/COMPARE_GROK_CHATGPT.md
 │    → docs/architecture/GROUNDING.md
-│    → docs/architecture/CHATGPT_AUDIT_NOTES.md
+    -> docs/architecture/CHATGPT_AUDIT_NOTES.md / CHATGPT_V02_R1_NOTES.md
 │    → docs/architecture/CANDIDATES.md
-│    STOP: do not implement V0.2 skill until ChatGPT final + explicit Codex task
+    STOP: do not implement V0.2-R1 skill until Rommy approve + ChatGPT handoff + explicit Codex task
 │
 ├─ Skill procedure / templates / rules / fixtures
 │    → denver-creative-os/skills/denver-creative-os/SKILL.md
@@ -73,7 +75,7 @@ What is the task about?
 │    → jobs/DCO-20260930-001/delivery/DELIVERY_MANIFEST.yaml
 │    → jobs/DCO-20260930-001/qa/* (SHOT-02 BLOCK history)
 │    → jobs/DCO-20260930-001/retest-sol/COMPARISON.md
-│    Lesson: BLOCK + override → DELIVERED is a contract hole; Ideal V0.2 closes it
+│    Lesson: BLOCK + override → DELIVERED is a contract hole; Ideal V0.2-R1 closes it
 │
 ├─ Roadmap / sequencing
 │    → ROADMAP.md
@@ -104,7 +106,7 @@ Stop and ask (do not guess) if the task would:
 3. **Auto-approve** or mark client `RELEASE_ELIGIBLE` / `DELIVERED` while critical FAIL or unresolved UNVERIFIABLE.  
 4. **Spend money** (API keys required for MVP capability).  
 5. **Edit `E:\Hermes` secrets/config** or couple DFI.  
-6. **Implement Ideal V0.2 skill** without ChatGPT-final / explicit implement instruction.  
+6. **Implement Ideal V0.2-R1 skill** without Rommy approve + ChatGPT handoff / explicit implement instruction.
 7. **Start a new client/pitch job** (e.g. bunk-bed / PPH real assets) without operator go.  
 8. **Claim pitch-ready** while POS/NEG/AMB contract fixtures are missing.  
 9. **Conflict** with deny list in `AGENTS.md` / skill invariants.  

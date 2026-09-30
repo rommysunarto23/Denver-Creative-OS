@@ -1,13 +1,30 @@
-﻿# SYNTHESIS.md — V0.1 / Ideal V0.2 merge
+﻿# SYNTHESIS.md - V0.1 / Ideal V0.2 merge
 
-**Phase:** B → pick → ChatGPT compare merge  
-**Updated:** 2026-09-30 ~17:16 Asia/Makassar (UTC+8)  
-**Inputs:** `GROUNDING.md`, `CANDIDATES.md`, `COMPARE_GROK_CHATGPT.md`, `CHATGPT_AUDIT_NOTES.md` (operator paste), demo job + Sol retest.  
+> **SUPERSEDED (pending operator approve):** Authoritative design intent is now **Ideal V0.2-R1** in `V02_R1.md` (Evidence Authority + Raster Preservation).  
+> Ideal V0.2 dual-layer below remains the **base merge** (ChatGPT release contract + Grok B generation). ChatGPT paste @ `fb9bd9b` did **not** approve V0.2 as-is; recommended R1 with **6 deltas**.  
+> **Grok stance:** Agree — adopt V0.2-R1 over V0.2 as-is; Codex must **wait** for Rommy approve + ChatGPT coding handoff. **No skill implement this turn.**  
+> See also: `CHATGPT_V02_R1_NOTES.md`, brief note in `COMPARE_GROK_CHATGPT.md`.
+
+**Phase:** B pick -> ChatGPT compare merge -> **V0.2-R1 harden (design only)**  
+**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)  
+**Inputs:** `GROUNDING.md`, `CANDIDATES.md`, `COMPARE_GROK_CHATGPT.md`, `CHATGPT_AUDIT_NOTES.md`, `CHATGPT_V02_R1_NOTES.md` (operator paste), demo job + Sol retest.  
 **Non-goals:** Implementation, Image API enablement, DFI/secrets, pitch deck, coding handoff execution.
 
 ---
 
-## Merge verdict (primary)
+## Status vs Ideal V0.2-R1
+
+| Item | State |
+|------|--------|
+| Ideal V0.2 (this file body) | Historical dual-layer merge — **still correct as base** |
+| Ideal V0.2-R1 (`V02_R1.md`) | **Pending Rommy approve** — recommended superseding pick |
+| Codex skill patch | **Blocked** until approve + ChatGPT handoff |
+| Checkpoint magic string | Unchanged this turn (still reopen conceptually) |
+
+**R1 six deltas (pointer only — full text in `V02_R1.md`):** (1) lock = `DERIVED_RENDER` not ground truth; (2) SOURCE_PRESERVE = deterministic cutout raster composite; (3) `SHOT_FEASIBILITY_GATE`; (4) multidimensional release; (5) POS/NEG/AMB x3 = 9/9; (6) hard checkpoint return gate.
+
+---
+## Merge verdict (primary) — Ideal V0.2 base (superseded by R1 pending approve)
 
 **Ideal V0.2 = both layers, not either-or:**
 
@@ -146,3 +163,4 @@ Prior synthesis: **Primary = Candidate B**.
 8. ChatGPT Images remains human; **Image API = later if manual preserve/lock-edit fail.**  
 9. Checkpoint conceptually **reopened for fidelity contract v0.2** until POS/NEG/AMB pass — **no code this turn.**  
 10. Next proof (design→trial): one SOURCE_PRESERVE composite + one lock-edit SHOT-02; then skill edits — still no API, no email/WA/portal.
+

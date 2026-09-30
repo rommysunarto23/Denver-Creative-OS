@@ -1,6 +1,6 @@
-# CONTEXT.md — current state (Denver Creative OS)
+﻿# CONTEXT.md — current state (Denver Creative OS)
 
-**As of:** 2026-09-30 (Asia/Makassar, UTC+8)  
+**As of:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
 **Repo:** `rommysunarto23/Denver-Creative-OS` · branch `main`  
 **Audience:** Codex / Cursor / operators. English + short ID summary.
 
@@ -10,7 +10,7 @@
 
 - V0 demo **selesai** (`DCO-20260930-001` DELIVERED, Image API = US$0).
 - Ada lubang kontrak: SHOT-02 geometry BLOCK + override → package DELIVERED.
-- Ideal **V0.2** didesain di `docs/architecture/SYNTHESIS.md`; **belum** diimplement di skill.
+- Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **pending Rommy approve**; skill belum diimplement; Codex tunggu approve + ChatGPT handoff.
 - Model Hermes default: **`gpt-6.1-sol` medium**. Hermes data: **`E:\Hermes`** (di luar repo).
 - Codex docs root: `AGENTS.md`, `routing.md`, this file, `ROADMAP.md`.
 
@@ -70,13 +70,13 @@ Previous default (`gpt-6-luna` / high) replaced 2026-09-30; Sol retest did **not
 MVP_READY_FOR_PITCH_PREPARATION
 ```
 
-Architecture merge (`SYNTHESIS.md` / ChatGPT audit) treats the **fidelity/release contract** as **conceptually reopened** for Ideal V0.2 until POS/NEG/AMB fixtures pass. Do **not** pitch “client-safe fidelity” on the SHOT-02 override path.
+Architecture merge treats the **fidelity/release contract** as **conceptually reopened** for Ideal **V0.2-R1** (`V02_R1.md`; V0.2 base in `SYNTHESIS.md`) until R1 return gate (9/9 fixtures + SOURCE_PRESERVE E2E + override impossible). Do **not** pitch "client-safe fidelity" on the SHOT-02 override path.
 
 Demo lessons (geometry override contradiction):
 
 - Fail-closed geometry BLOCK ×4 on SHOT-02; GPT Image primary cause.
 - Operator override B packaged Cand-04 with `geometry_drift: true`; Hermes stayed REVISE; status still DELIVERED.
-- That contradiction is exactly what Ideal V0.2 release law closes (`EXPERIMENT_ACCEPTED` ≠ client `RELEASE_ELIGIBLE`).
+- That contradiction is exactly what Ideal V0.2 / V0.2-R1 release law closes (`EXPERIMENT_ACCEPTED` != client `RELEASE_ELIGIBLE`).
 
 ---
 
@@ -89,8 +89,8 @@ Demo lessons (geometry override contradiction):
 | DCO-2 project skill V0 | Proven (files in repo) |
 | DCO-3 demo job end-to-end | Proven (`jobs/DCO-20260930-001/`) |
 | Sol Medium model lock | Proven (smoke + retest docs) |
-| Ideal V0.2 **design** (SYNTHESIS) | Written |
-| Ideal V0.2 **skill implement** | **Not done** (pending ChatGPT final + Codex) |
+| Ideal V0.2 design (SYNTHESIS) + **V0.2-R1** (`V02_R1.md`) | Written; R1 **pending Rommy approve** |
+| Ideal V0.2-R1 **skill implement** | **Not done** (wait: approve + ChatGPT handoff + Codex task) |
 | POS/NEG/AMB semantic fixtures | **Not done** |
 | Identity lock proof trial | **Not done** (V0.1 track on roadmap) |
 | Portal / Image API | **Later** |
@@ -114,4 +114,4 @@ Demo lessons (geometry override contradiction):
 - Behavior contract: `AGENTS.md`  
 - Router: `routing.md`  
 - Sequencing: `ROADMAP.md`  
-- Ideal V0.2: `denver-creative-os/docs/architecture/SYNTHESIS.md`
+- Ideal V0.2-R1: `denver-creative-os/docs/architecture/V02_R1.md` (base: `SYNTHESIS.md`)
