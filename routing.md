@@ -24,7 +24,7 @@
 2. AGENTS.md           (do / don't / DoD / verify)
 3. CONTEXT.md          (what is true right now)
 4. ROADMAP.md          (what is next vs later)
-5. denver-creative-os/docs/architecture/V02_R1.md          # Ideal V0.2-R1 (pending approve)
+5. denver-creative-os/docs/architecture/V02_R1.md          # Ideal V0.2-R1 (ACCEPTED; Codex handoff ready)
 6. denver-creative-os/docs/architecture/SYNTHESIS.md        # Ideal V0.2 dual-layer base
 7. denver-creative-os/docs/architecture/COMPARE_GROK_CHATGPT.md
 8. denver-creative-os/docs/architecture/GROUNDING.md
@@ -54,13 +54,13 @@ What is the task about?
 │    → DENVER_CREATIVE_OS_ARCHITECTURE_AND_REPO_BLUEPRINT.md
 │
 ├─ Fidelity architecture / Ideal V0.2-R1 / release honesty
-    -> docs/architecture/V02_R1.md              # Ideal V0.2-R1 (authoritative pending approve)
+    -> docs/architecture/V02_R1.md              # Ideal V0.2-R1 (authoritative; ACCEPTED; Codex handoff ready)
     -> docs/architecture/SYNTHESIS.md          # Ideal V0.2 dual-layer base
 │    → docs/architecture/COMPARE_GROK_CHATGPT.md
 │    → docs/architecture/GROUNDING.md
     -> docs/architecture/CHATGPT_AUDIT_NOTES.md / CHATGPT_V02_R1_NOTES.md
 │    → docs/architecture/CANDIDATES.md
-    STOP: do not implement V0.2-R1 skill until Rommy approve + ChatGPT handoff + explicit Codex task
+    STOP: do not implement V0.2-R1 skill without the committed handoff and an explicit Codex implementation task
 │
 ├─ Skill procedure / templates / rules / fixtures
 │    → denver-creative-os/skills/denver-creative-os/SKILL.md
@@ -106,7 +106,7 @@ Stop and ask (do not guess) if the task would:
 3. **Auto-approve** or mark client `RELEASE_ELIGIBLE` / `DELIVERED` while critical FAIL or unresolved UNVERIFIABLE.  
 4. **Spend money** (API keys required for MVP capability).  
 5. **Edit `E:\Hermes` secrets/config** or couple DFI.  
-6. **Implement Ideal V0.2-R1 skill** without Rommy approve + ChatGPT handoff / explicit implement instruction.
+6. **Implement Ideal V0.2-R1 skill** without the committed Codex handoff / explicit implementation instruction.
 7. **Start a new client/pitch job** (e.g. bunk-bed / PPH real assets) without operator go.  
 8. **Claim pitch-ready** while POS/NEG/AMB contract fixtures are missing.  
 9. **Conflict** with deny list in `AGENTS.md` / skill invariants.  

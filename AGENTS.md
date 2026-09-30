@@ -13,7 +13,7 @@
 
 - Outcome produk: cutout furniture/PPH → ≥3 shot lifestyle studio enterprise.
 - Hermes orkestrasi; ChatGPT Images = human V0; Rommy final authority.
-- Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **pending Rommy approve**; Codex waits for approve + ChatGPT handoff. See `docs/architecture/V02_R1.md`.
+- Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **ACCEPTED by Rommy 2026-09-30**; ChatGPT handoff committed and ready at `CODEX_HANDOFF.md`; next gate: explicit Codex implementation task. See `docs/architecture/V02_R1.md`.
 - **Jangan** Image API / browser auto / auto client-release.
 - Baca dulu: `routing.md` -> `CONTEXT.md` -> architecture **Ideal V0.2-R1** (`V02_R1.md`); V0.2 base masih di `SYNTHESIS.md`.
 
@@ -56,8 +56,8 @@ Under `denver-creative-os/docs/architecture/`:
 
 | Doc | Why |
 |-----|-----|
-| **`V02_R1.md`** | **Ideal V0.2-R1** (authoritative pending approve) — 6 deltas + Grok stance |
-| `SYNTHESIS.md` | Ideal V0.2 dual-layer base (superseded by R1 pending approve) |
+| **`V02_R1.md`** | **Ideal V0.2-R1** (authoritative — ACCEPTED by Rommy 2026-09-30) — 6 deltas + Grok stance |
+| `SYNTHESIS.md` | Ideal V0.2 dual-layer base (superseded by R1 — **ACCEPTED by Rommy 2026-09-30**) |
 | `COMPARE_GROK_CHATGPT.md` | Orthogonal layers: generation (Grok B) vs release/QA (ChatGPT); R1 postscript |
 | `GROUNDING.md` | How the live V0 loop actually works + fidelity imbalance census |
 | `CHATGPT_V02_R1_NOTES.md` / `CHATGPT_AUDIT_NOTES.md` / `CANDIDATES.md` | R1 paste summary; prior audit; candidates |
@@ -70,9 +70,9 @@ Demo lessons: `jobs/DCO-20260930-001/` especially `OPERATOR_NEXT.md`, `delivery/
 
 ---
 
-## Ideal V0.2-R1 (design — implement only after Rommy approve + ChatGPT handoff)
+## Ideal V0.2-R1 (accepted design — Codex handoff ready; implement only on explicit task)
 
-**Status:** Ideal **V0.2-R1** recommended over V0.2 as-is — **pending Rommy approve**. Codex must **wait** for approve + **ChatGPT coding handoff**. Do **not** invent a partial skill patch without an explicit task.
+**Status:** Ideal **V0.2-R1** recommended over V0.2 as-is — **ACCEPTED by Rommy 2026-09-30**. Final ChatGPT Codex handoff is committed and ready at `CODEX_HANDOFF.md`; next gate is an explicit implementation task. Do **not** invent a partial skill patch without an explicit task.
 
 Base dual layer (Ideal V0.2 — still required):
 
@@ -88,7 +88,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 ## Do
 
 - Follow `routing.md` before large edits.
-- Prefer docs + skill/templates/fixtures changes that match **Ideal V0.2-R1** when the patch task is explicit (after approve + handoff).
+- Prefer docs + skill/templates/fixtures changes that match **Ideal V0.2-R1** when the patch task is explicit (after ChatGPT handoff).
 - Keep generation mode `MANUAL_CHATGPT_IMAGES`; `incremental_image_api_spend_usd: 0`.
 - Preserve immutable `source/product-reference.png` (never overwrite).
 - Version prompts (`*-vN.md`); never silent overwrite of QA history.
@@ -98,7 +98,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 
 ## Do not
 
-- Implement Ideal V0.2 / V0.2-R1 skill patch unless Rommy approved R1, ChatGPT handoff exists, and the user/task explicitly asks (this docs-only task does **not**).
+- Implement Ideal V0.2 / V0.2-R1 skill patch unless ChatGPT handoff exists and the user/task explicitly asks (this docs-only task does **not**).
 - Call or enable **Image API** / paid image generation.
 - **Browser-automate** ChatGPT Images UI.
 - **Auto client-release** or auto-approve (Hermes recommends only).
@@ -111,7 +111,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 
 ## Definition of done — next fidelity patch (Ideal V0.2 skill)
 
-When (and only when) tasked to implement V0.2-R1 after approve + handoff:
+When (and only when) tasked to implement V0.2-R1 after ChatGPT handoff:
 
 1. Skill + `references/` + `templates/` encode evidence-aware triad + `SOURCE_PRESERVE` / `NOVEL_VIEW` modes + no client-release override.
 2. Optional generation-lock (`DERIVED_RENDER`, not ground truth) gated for `NOVEL_VIEW` / insufficient evidence; SOURCE_PRESERVE uses deterministic cutout composite (not forced lock on every shot).

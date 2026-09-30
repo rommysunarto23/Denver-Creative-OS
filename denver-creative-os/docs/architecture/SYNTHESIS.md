@@ -1,8 +1,8 @@
 ﻿# SYNTHESIS.md - V0.1 / Ideal V0.2 merge
 
-> **SUPERSEDED (pending operator approve):** Authoritative design intent is now **Ideal V0.2-R1** in `V02_R1.md` (Evidence Authority + Raster Preservation).  
+> **SUPERSEDED (operator-approved 2026-09-30):** Authoritative design intent is now **Ideal V0.2-R1** in `V02_R1.md` (Evidence Authority + Raster Preservation); the final Codex handoff is committed and ready at root `CODEX_HANDOFF.md`.
 > Ideal V0.2 dual-layer below remains the **base merge** (ChatGPT release contract + Grok B generation). ChatGPT paste @ `fb9bd9b` did **not** approve V0.2 as-is; recommended R1 with **6 deltas**.  
-> **Grok stance:** Agree — adopt V0.2-R1 over V0.2 as-is; Codex must **wait** for Rommy approve + ChatGPT coding handoff. **No skill implement this turn.**  
+> **Grok stance:** Agree — adopt V0.2-R1 over V0.2 as-is; Rommy approval and the ChatGPT coding handoff are complete. Codex must wait for an explicit implementation task. **No skill implement this turn.**
 > See also: `CHATGPT_V02_R1_NOTES.md`, brief note in `COMPARE_GROK_CHATGPT.md`.
 
 **Phase:** B pick -> ChatGPT compare merge -> **V0.2-R1 harden (design only)**  
@@ -17,14 +17,14 @@
 | Item | State |
 |------|--------|
 | Ideal V0.2 (this file body) | Historical dual-layer merge — **still correct as base** |
-| Ideal V0.2-R1 (`V02_R1.md`) | **Pending Rommy approve** — recommended superseding pick |
-| Codex skill patch | **Blocked** until approve + ChatGPT handoff |
+| Ideal V0.2-R1 (`V02_R1.md`) | **ACCEPTED by Rommy 2026-09-30** — canonical successor; Codex handoff ready |
+| Codex skill patch | **Blocked** until an explicit implementation task; handoff is ready |
 | Checkpoint magic string | Unchanged this turn (still reopen conceptually) |
 
 **R1 six deltas (pointer only — full text in `V02_R1.md`):** (1) lock = `DERIVED_RENDER` not ground truth; (2) SOURCE_PRESERVE = deterministic cutout raster composite; (3) `SHOT_FEASIBILITY_GATE`; (4) multidimensional release; (5) POS/NEG/AMB x3 = 9/9; (6) hard checkpoint return gate.
 
 ---
-## Merge verdict (primary) — Ideal V0.2 base (superseded by R1 pending approve)
+## Merge verdict (primary) — Ideal V0.2 base (superseded by R1 accepted 2026-09-30)
 
 **Ideal V0.2 = both layers, not either-or:**
 

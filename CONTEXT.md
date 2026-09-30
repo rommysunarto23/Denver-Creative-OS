@@ -10,7 +10,7 @@
 
 - V0 demo **selesai** (`DCO-20260930-001` DELIVERED, Image API = US$0).
 - Ada lubang kontrak: SHOT-02 geometry BLOCK + override → package DELIVERED.
-- Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **pending Rommy approve**; skill belum diimplement; Codex tunggu approve + ChatGPT handoff.
+- Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **ACCEPTED by Rommy 2026-09-30**; final ChatGPT Codex handoff committed and ready at `CODEX_HANDOFF.md`; skill belum diimplement; Codex tunggu explicit implementation task.
 - Model Hermes default: **`gpt-6.1-sol` medium**. Hermes data: **`E:\Hermes`** (di luar repo).
 - Codex docs root: `AGENTS.md`, `routing.md`, this file, `ROADMAP.md`.
 
@@ -89,8 +89,8 @@ Demo lessons (geometry override contradiction):
 | DCO-2 project skill V0 | Proven (files in repo) |
 | DCO-3 demo job end-to-end | Proven (`jobs/DCO-20260930-001/`) |
 | Sol Medium model lock | Proven (smoke + retest docs) |
-| Ideal V0.2 design (SYNTHESIS) + **V0.2-R1** (`V02_R1.md`) | Written; R1 **pending Rommy approve** |
-| Ideal V0.2-R1 **skill implement** | **Not done** (wait: approve + ChatGPT handoff + Codex task) |
+| Ideal V0.2 design (SYNTHESIS) + **V0.2-R1** (`V02_R1.md`) | Written; R1 **ACCEPTED by Rommy 2026-09-30**; Codex handoff ready |
+| Ideal V0.2-R1 **skill implement** | **Not done** (wait: explicit Codex implementation task; intentionally excluded here) |
 | POS/NEG/AMB semantic fixtures | **Not done** |
 | Identity lock proof trial | **Not done** (V0.1 track on roadmap) |
 | Portal / Image API | **Later** |
