@@ -3,7 +3,7 @@
 **Audience:** Codex, Cursor, and other coding agents working in this repo.  
 **Operator:** Rommy (final authority).  
 **Language:** English agent contracts + short Indonesian (ID) operator summary.  
-**Updated:** 2026-09-30 ~18:15 Asia/Makassar (UTC+8)
+**Updated:** 2026-09-30 ~19:55 Asia/Makassar (UTC+8)
 
 > Pointer files: `AGENT.md` → this file. Router: `routing.md` (see also `ROUTER.md`).
 
@@ -11,12 +11,13 @@
 
 ## ID ringkas (operator)
 
+- **V0.2-R2-Lite ACCEPTED** for ChatGPT final repo audit — `docs/architecture/V02_R2_LITE.md`. **Codex HOLD.** R1 SUPERSEDED; do not implement PATCH-1..15 from R1.
 - Outcome produk: cutout furniture/PPH → ≥3 shot lifestyle studio enterprise.
 - Hermes orkestrasi; V0 gen = Hermes `image_generate` (Codex OAuth); Rommy human release gate / final authority.
 - Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **ACCEPTED by Rommy 2026-09-30**; ChatGPT handoff committed and ready at `CODEX_HANDOFF.md`; next gate: explicit Codex implementation task. See `docs/architecture/V02_R1.md`.
 - **Jangan** paid Images API key as required V0 dep / browser auto ChatGPT Images UI / auto client-release. **Boleh** Hermes Codex OAuth `image_generate` (human gate tetap).
 - Baca dulu: `routing.md` -> `CONTEXT.md` -> architecture **Ideal V0.2-R1** (`V02_R1.md`); V0.2 base masih di `SYNTHESIS.md`.
-- **Codex session start:** paste `CODEX_START_PROMPT.md` dulu.
+- **Codex session start:** **HOLD** — do not start R1 patches; wait for post-audit handoff (`CODEX_HANDOFF.md`).
 
 ---
 
@@ -57,7 +58,7 @@ Under `denver-creative-os/docs/architecture/`:
 
 | Doc | Why |
 |-----|-----|
-| **`V02_R1.md`** | **Ideal V0.2-R1** (authoritative — ACCEPTED by Rommy 2026-09-30) — 6 deltas + Grok stance |
+| **`V02_R2_LITE.md`** | **V0.2-R2-Lite** (ACCEPTED for ChatGPT final repo audit; Codex HOLD). R1 handoff SUPERSEDED. |
 | `SYNTHESIS.md` | Ideal V0.2 dual-layer base (superseded by R1 — **ACCEPTED by Rommy 2026-09-30**) |
 | `COMPARE_GROK_CHATGPT.md` | Orthogonal layers: generation (Grok B) vs release/QA (ChatGPT); R1 postscript |
 | `GROUNDING.md` | How the live V0 loop actually works + fidelity imbalance census |

@@ -1,4 +1,4 @@
-﻿# SYNTHESIS.md - V0.1 / Ideal V0.2 merge
+# SYNTHESIS.md - V0.1 / Ideal V0.2 merge
 
 > **SUPERSEDED (operator-approved 2026-09-30):** Authoritative design intent is now **Ideal V0.2-R1** in `V02_R1.md` (Evidence Authority + Raster Preservation); the final Codex handoff is committed and ready at root `CODEX_HANDOFF.md`.
 > Ideal V0.2 dual-layer below remains the **base merge** (ChatGPT release contract + Grok B generation). ChatGPT paste @ `fb9bd9b` did **not** approve V0.2 as-is; recommended R1 with **6 deltas**.  
@@ -174,3 +174,8 @@ Prior synthesis: **Primary = Candidate B**.
 
 Canonical wording + setup pointer: `FINAL_CODEX_HANDOFF_DCO_V02_R1.md` § **V0 image generation path (Hermes Codex OAuth)**. Residual risks: advisory size/quality on Codex auth; GPT Image 2.5 unavailable on Codex auth; geometry failures still possible.
 
+---
+
+## Append — V0.2-R2-Lite (2026-09-30)
+
+**R2-lite accepted 2026-09-30** for ChatGPT final repo audit (Grok reconciled). Canonical: `V02_R2_LITE.md`. **Codex HOLD** pending ChatGPT audit. R1 handoff SUPERSEDED — do not implement PATCH-1..15 from R1.

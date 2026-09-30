@@ -1,6 +1,6 @@
 # CONTEXT.md — current state (Denver Creative OS)
 
-**As of:** 2026-09-30 ~18:15 Asia/Makassar (UTC+8)
+**As of:** 2026-09-30 ~19:55 Asia/Makassar (UTC+8)
 **Repo:** `rommysunarto23/Denver-Creative-OS` · branch `main`  
 **Audience:** Codex / Cursor / operators. English + short ID summary.
 
@@ -8,12 +8,15 @@
 
 ## ID ringkas
 
+- **V0.2-R2-Lite ACCEPTED** (2026-09-30) for ChatGPT final repo audit — canonical: `denver-creative-os/docs/architecture/V02_R2_LITE.md`. **Codex: HOLD.** R1 handoff SUPERSEDED; do **not** implement PATCH-1..15 from R1; wait for post-audit Codex handoff.
+- V0 demo **selesai** (`DCO-20260930-001` DELIVERED, paid Image API key = US## ID ringkas
+
 - V0 demo **selesai** (`DCO-20260930-001` DELIVERED, paid Image API key = US$0). **V0 gen path amended:** Hermes Codex OAuth `image_generate` (docs/handoff; skill impl pending).
 - Ada lubang kontrak: SHOT-02 geometry BLOCK + override → package DELIVERED.
-- Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **ACCEPTED by Rommy 2026-09-30**; final ChatGPT Codex handoff committed and ready at `CODEX_HANDOFF.md`; skill belum diimplement; Codex tunggu explicit implementation task.
+- Ideal **V0.2-R1** (`V02_R1.md` / FINAL R1 handoff) — **SUPERSEDED / HOLD**. Do not implement PATCH-1..15 from R1. Succeeded by **V0.2-R2-Lite** (`V02_R2_LITE.md`).
 - Model Hermes default: **`gpt-6.1-sol` medium**. Hermes data: **`E:\Hermes`** (di luar repo).
 - Codex docs root: `AGENTS.md`, `routing.md`, this file, `ROADMAP.md`.
-- **Codex session start:** paste root `CODEX_START_PROMPT.md` then follow its read order (authority: FINAL handoff §35/§36).
+- **Codex session start:** HOLD — do not paste R1 start prompt for implementation; wait for post-audit handoff. Architecture candidate: `V02_R2_LITE.md`.
 
 ---
 
@@ -68,7 +71,7 @@ Previous default (`gpt-6-luna` / high) replaced 2026-09-30; Sol retest did **not
 `denver-creative-os/docs/CURRENT_CHECKPOINT.md` still carries magic string:
 
 ```text
-MVP_READY_FOR_PITCH_PREPARATION
+MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE
 ```
 
 Architecture merge treats the **fidelity/release contract** as **conceptually reopened** for Ideal **V0.2-R1** (`V02_R1.md`; V0.2 base in `SYNTHESIS.md`) until R1 return gate (9/9 fixtures + SOURCE_PRESERVE E2E + override impossible). Do **not** pitch "client-safe fidelity" on the SHOT-02 override path.
@@ -112,7 +115,7 @@ Demo lessons (geometry override contradiction):
 
 ## Pointers
 
-- **Codex session start:** paste `CODEX_START_PROMPT.md` → follow its read order  
+- **Codex session start:** HOLD — do not paste R1 start prompt for implementation; wait for post-audit handoff. Architecture candidate: `V02_R2_LITE.md`.
 - Handoff pointer: `CODEX_HANDOFF.md` → FINAL authority + checklist  
 - Behavior contract: `AGENTS.md`  
 - Router: `routing.md`  

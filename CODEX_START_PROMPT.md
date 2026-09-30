@@ -1,3 +1,15 @@
+# Codex start prompt — Denver Creative OS
+
+> **HOLD (2026-09-30):** R1 start prompt / PATCH-1..15 map is **SUPERSEDED**.  
+> Current architecture candidate: `denver-creative-os/docs/architecture/V02_R2_LITE.md` (V0.2-R2-Lite ACCEPTED for ChatGPT final repo audit).  
+> **Codex: HOLD** — do **not** implement PATCH-1..15 from R1; wait for post-audit Codex handoff.  
+> Checkpoint magic: `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE`.
+
+---
+
+## Historical R1 start prompt (do not execute)
+
+The remainder of this file is the prior V0.2-R1 start pack, retained for audit trail only.
 # Codex start prompt — Denver Creative OS V0.2-R1
 
 **Paste this entire file into a fresh Codex session.**  

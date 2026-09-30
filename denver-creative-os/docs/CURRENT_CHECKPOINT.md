@@ -1,13 +1,19 @@
-﻿# CURRENT_CHECKPOINT
+# CURRENT_CHECKPOINT
 
-**Status:** `MVP_READY_FOR_PITCH_PREPARATION`  
-**Written:** 2026-09-30T15:56:00+08:00 (Asia/Makassar)  
+**Status:** `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE`
+**Written:** 2026-09-30T19:55:00+08:00 (Asia/Makassar)
 **Demo job:** `DCO-20260930-001`  
-**Product target (operator):** PPH-style furniture AI lifestyle from cutouts → enterprise studio (≥3 shots); Hermes orchestrates; human Images V0; Rommy cross-check before client; email/WA/portal later.
+**Product target (operator):** PPH-style furniture AI lifestyle from cutouts → enterprise studio (≥3 shots); Hermes orchestrates; V0 gen = Hermes image_generate (Codex OAuth; handoff amended); Rommy cross-check / human release gate before client; email/WA/portal later.
 
 ## Magic string
 
-MVP_READY_FOR_PITCH_PREPARATION
+MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE
+
+**PATCH-0 (2026-09-30, Asia/Makassar):** Fidelity/release contract reopened under [`FINAL_CODEX_HANDOFF_DCO_V02_R1.md`](architecture/FINAL_CODEX_HANDOFF_DCO_V02_R1.md) §35. The V0 demo remains historical orchestration proof; its SHOT-02 geometry override does not establish V0.2-R1 client-release eligibility.
+
+Pitch preparation remains gated until every item in the handoff's **Pitch-ready return gate** passes, including POS/NEG/AMB 9/9 on Sol Medium, SOURCE_PRESERVE E2E, and NOVEL_VIEW insufficient-evidence routing. PATCH-0 changes checkpoint status only; contract implementation and acceptance are pending.
+**V0 gen path amended (2026-09-30 Asia/Makassar, handoff authority):** Hermes `image_generate` via OpenAI Codex OAuth — not manual ChatGPT Images paste. Human release gate + SOURCE_PRESERVE / Evidence Authority unchanged. Implementation still pending PATCH sequence; this line is docs/handoff only.
+
 
 ## Demo job delivery (walkable proof)
 
@@ -64,8 +70,9 @@ Generation: `MANUAL_CHATGPT_IMAGES`. Incremental Image API spend: **US$0**.
 
 Do **not** add in V0 (still active):
 
-- Image API / paid image generation API
-- Browser automation of ChatGPT UI
+- Paid OpenAI Images API key as required V0 dependency (optional later)
+- Browser automation of ChatGPT Images UI
+- Auto client-release without human gate
 - n8n / MCP / cron / webhooks
 - Database / VPS / local FLUX requirement
 - Multi-agent split / fully autonomous approval
@@ -84,10 +91,12 @@ Do **not** add in V0 (still active):
 
 ## Next step (not done)
 
-**Proof pack** for pitch prep — see `docs/PITCH_PREP_STUB.md`.  
-Deck / client proposal copy is deferred until Rommy confirms this checkpoint and starts proof-pack work.
+**Codex HOLD.** Wait for ChatGPT final repo audit + post-audit Codex handoff. Do **not** implement PATCH-1..15 from R1.
+Architecture candidate: `architecture/V02_R2_LITE.md`.
 
-## Handoff — start pitch prep from this file alone
+## Historical V0 pitch handoff — superseded by PATCH-0
+
+The following V0 handoff is historical context. Current next action is PATCH-1; this section does not authorize pitch preparation while the fidelity contract is reopened.
 
 Inputs for the operator:
 
@@ -112,10 +121,25 @@ Pitch tracks (hypotheses only, after proof pack): furniture/ecommerce (PPH-style
 | Config | `E:\Hermes\config.yaml` (`model.default`, `agent.reasoning_effort`) |
 | Smoke | Text + vision **PASS** on new default (see `docs/PROVIDER_GATE.md` append) |
 | Escalation | Same model + `--reasoning high` for difficult visual QA only |
-| Image gen | Still manual ChatGPT Images; no Image API |
+| Image gen | Handoff amended: Hermes Codex OAuth `image_generate` (impl pending); paid Images API key not required |
 | Final authority | Rommy |
 | Memory | Still 2g (`2147483648`) |
 | Not done | No new bunk-bed job; no DFI; no Image API |
 
-Checkpoint magic string **unchanged:** `MVP_READY_FOR_PITCH_PREPARATION`.
+Historical checkpoint at the time of this V0 model-lock append: `MVP_READY_FOR_PITCH_PREPARATION`. Current status is the reopened V0.2-R1 magic string above.
 
+## Append — V0.2-R2-Lite accepted (2026-09-30T19:55:00+08:00)
+
+**Magic string:** `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE`
+
+| Item | Value |
+|------|-------|
+| Canonical architecture | [`architecture/V02_R2_LITE.md`](architecture/V02_R2_LITE.md) |
+| Operator status | ACCEPTED for ChatGPT final repo audit (Grok reconciled R2-lite) |
+| Codex | **HOLD** — do not implement PATCH-1..15 from R1; wait for post-audit handoff |
+| R1 handoff | SUPERSEDED (historical). PATCH-0 local reopen folded into this checkpoint |
+| Next | ChatGPT final repo audit → freeze → Codex implementation handoff |
+
+**Grok residual risks (implementation smoke, not redesign):** (1) `ctx.dispatch_tool` from tool handler must be smoked on this Hermes install; (2) project plugins need `HERMES_ENABLE_PROJECT_PLUGINS=true` + `plugins.enabled`; (3) single pitch gate requires Mode A+B+C+9/9 before any pitch.
+
+**Next step (supersedes PATCH-1):** No Codex patches until post-audit handoff. Do not start skill/plugin/code.

@@ -1,9 +1,15 @@
 # Codex handoff
 
-**New Codex session:** paste [`CODEX_START_PROMPT.md`](CODEX_START_PROMPT.md) first, then follow its mandatory read order.
+**Status: HOLD — R1 handoff SUPERSEDED.**
 
-Accepted V0.2-R1 implementation authority: [`denver-creative-os/docs/architecture/FINAL_CODEX_HANDOFF_DCO_V02_R1.md`](denver-creative-os/docs/architecture/FINAL_CODEX_HANDOFF_DCO_V02_R1.md) (especially **§35** PATCH-0..15 map + patch plan §§1–11 + **§36** report).
+**Do not implement** PATCH-1..15 from V0.2-R1. Wait for post-audit Codex handoff after ChatGPT final repo audit.
 
-One-page tracker: [`denver-creative-os/docs/architecture/CODEX_SESSION_CHECKLIST.md`](denver-creative-os/docs/architecture/CODEX_SESSION_CHECKLIST.md).
+| Item | Value |
+|------|-------|
+| Current architecture candidate | [`denver-creative-os/docs/architecture/V02_R2_LITE.md`](denver-creative-os/docs/architecture/V02_R2_LITE.md) (V0.2-R2-Lite; ACCEPTED for ChatGPT final repo audit) |
+| Operator status | ACCEPTED (Grok reconciled R2-lite) |
+| Codex | **HOLD** |
+| R1 handoff | SUPERSEDED / historical only — [`FINAL_CODEX_HANDOFF_DCO_V02_R1.md`](denver-creative-os/docs/architecture/FINAL_CODEX_HANDOFF_DCO_V02_R1.md) |
+| Checkpoint magic | `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE` |
 
-Status: **ACCEPTED V0.2-R1; start-pack ready.** V0 image gen path amended to Hermes `image_generate` + OpenAI Codex OAuth (see FINAL handoff subsection); human release gate + SOURCE_PRESERVE unchanged. Implement only on explicit Codex task; **do not redo PATCH-0**; **hold PATCH-1 until operator GO**.
+**New Codex session (when un-HOLD):** paste [`CODEX_START_PROMPT.md`](CODEX_START_PROMPT.md) only after a post-audit implementation handoff is published. Until then, do not start skill/plugin/code patches.
