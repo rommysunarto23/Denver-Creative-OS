@@ -164,3 +164,13 @@ Prior synthesis: **Primary = Candidate B**.
 9. Checkpoint conceptually **reopened for fidelity contract v0.2** until POS/NEG/AMB pass — **no code this turn.**  
 10. Next proof (design→trial): one SOURCE_PRESERVE composite + one lock-edit SHOT-02; then skill edits — still no API, no email/WA/portal.
 
+---
+
+## Amendment note — V0 image gen path (2026-09-30 Asia/Makassar)
+
+**Operator ACCEPTED:** Ideal V0.2-R1 still holds (SOURCE_PRESERVE + Evidence Authority + DERIVED_RENDER non-authority + human release gate).
+
+**Amended:** V0 candidate generation path is Hermes `image_generate` via **OpenAI (Codex auth)** OAuth — not manual ChatGPT Images paste, and not ChatGPT Images UI browser automation. Paid OpenAI Images API key remains optional/later, not a required V0 dependency.
+
+Canonical wording + setup pointer: `FINAL_CODEX_HANDOFF_DCO_V02_R1.md` § **V0 image generation path (Hermes Codex OAuth)**. Residual risks: advisory size/quality on Codex auth; GPT Image 2.5 unavailable on Codex auth; geometry failures still possible.
+

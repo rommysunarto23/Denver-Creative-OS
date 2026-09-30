@@ -13,11 +13,11 @@
 2. **poteto-mode:** one PATCH at a time; verify before the next.
 3. **Code under package:** skill/job/template/fixture work lives under `denver-creative-os/`. Root docs (`AGENTS.md`, `routing.md`, `CONTEXT.md`, `ROADMAP.md`, `CODEX_HANDOFF.md`, this file) are orchestration pointers.
 4. **Do not rewrite** historical demo QA bytes in `denver-creative-os/jobs/DCO-20260930-001/`. Migration note only if the contract requires a pointer; leave delivered artifacts intact.
-5. **V0.2-R1 denies (hard):**
-   - Image API automation / paid image generation
-   - Browser automation of ChatGPT Images
-   - Auto client-release / auto-approve
-   - n8n / MCP / webhooks / DB / VPS / multi-agent orchestration splits in this phase
+5. **V0.2-R1 allow/deny (image gen + release):**
+   - **ALLOW:** Hermes `image_generate` with provider **OpenAI (Codex auth)** OAuth for V0 candidate generation/edit (subscription OAuth; no separate paid Images API key required for that path).
+   - **DENY:** Paid OpenAI Images API key path as a *required* V0 dependency (optional later); browser automation of chat.openai.com / chatgpt.com Images UI; auto client-release / auto-approve without human gate.
+   - Allowing Hermes `image_generate` does **not** relax SOURCE_PRESERVE, SHOT_FEASIBILITY_GATE, evidence-aware QA, DERIVED_RENDER non-authority, or human release.
+   - n8n / MCP / webhooks / DB / VPS / multi-agent orchestration splits remain out of this phase
 6. Hermes data at `E:\Hermes` is **out of repo** — never paste secrets, `auth.json`, tokens, or keys.
 
 ---
@@ -50,7 +50,8 @@ Optional one-page tracker: `denver-creative-os/docs/architecture/CODEX_SESSION_C
 - Ideal **V0.2-R1 ACCEPTED** by Rommy: **Evidence Authority + Raster Preservation**; Rommy approved the **6 deltas**.
 - Primary path **`SOURCE_PRESERVE`**. **`NOVEL_VIEW`** is higher risk → **`NEEDS_EVIDENCE`** when evidence is insufficient (that refusal is success).
 - Default Hermes model **`gpt-6.1-sol` / reasoning medium**. High only for hard QA escalation; High **cannot rescue acceptance**.
-- ChatGPT Images remains **manual V0** (human UI).
+- **V0 gen path (amended):** Hermes `image_generate` + OpenAI Codex OAuth (not manual ChatGPT Images paste). Human cross-check / release gate + SOURCE_PRESERVE / Evidence Authority unchanged. Geometry can still fail; automation ≠ fidelity fix.
+- GPT Image 2.5 is **not** on Codex auth (API key or FAL if ever needed). `hermes setup --portal` ≠ Codex OAuth image provider. Select via `hermes tools` → Image Generation → OpenAI (Codex auth); one text + one edit smoke before skill reliance.
 - Hermes data at `E:\Hermes` is OUT of repo — never paste secrets.
 
 ---
@@ -59,19 +60,23 @@ Optional one-page tracker: `denver-creative-os/docs/architecture/CODEX_SESSION_C
 
 Use FINAL handoff **§35** mapping **PATCH-0..15** (maps onto patch plan §§1–11 + fixtures/validators/E2E/return gate).
 
-1. Start **PATCH-0** (checkpoint reopen → `MVP_REOPENED_FOR_FIDELITY_CONTRACT_V02_R1`).
-2. Then **PATCH-1**, then continue **one-at-a-time** through **PATCH-15**.
-3. **Pitch-ready** only after return gate **all PASS** + **§36** YAML report filled honestly.
-4. After each patch: short status — what changed / what verified / next PATCH id.
-5. If any required gate fails, checkpoint stays reopened; **no partial success may be relabeled pitch-ready**.
+**Docs amend (2026-09-30):** V0 image gen path is now Hermes Codex OAuth `image_generate` (see FINAL handoff subsection). This does **not** authorize skill/compositor implementation yet.
+
+1. **PATCH-0** may already be done locally (uncommitted checkpoint reopen). **Do not redo PATCH-0.**
+2. **Hold PATCH-1** until the operator explicitly says **GO**. After re-reading `CODEX_START_PROMPT.md` + FINAL handoff, wait.
+3. When GO: continue **one-at-a-time** through **PATCH-15**.
+4. **Pitch-ready** only after return gate **all PASS** + **§36** YAML report filled honestly.
+5. After each patch: short status — what changed / what verified / next PATCH id.
+6. If any required gate fails, checkpoint stays reopened; **no partial success may be relabeled pitch-ready**.
 
 ---
 
 ## E. First actions for this session
 
-1. Confirm **§35** exists in local `FINAL_CODEX_HANDOFF_DCO_V02_R1.md`. If missing, **stop and report**.
-2. Execute **PATCH-0 only**.
-3. **Stop and report**; wait for operator before PATCH-1 unless the operator explicitly said continue.
+1. Re-read this file + FINAL handoff (including **V0 image generation path (Hermes Codex OAuth)**). Confirm **§35** exists. If missing, **stop and report**.
+2. **Do not redo PATCH-0** if checkpoint reopen already exists locally.
+3. **Do not start PATCH-1** until operator says **GO**.
+4. **Stop and report** current status (PATCH-0 state + waiting for GO).
 
 ---
 
@@ -89,6 +94,8 @@ After paste + reads, Codex can begin **without** asking Denver for missing conte
 
 ---
 
-## Quick deny reminder
+## Quick allow/deny reminder
 
-No Image API · no browser auto · no auto client-release · no n8n/MCP/multi-agent orchestration · no “Sol upgrade = geometry PASS” · no secrets in chat/git · no rewrite of demo QA history.
+**ALLOW:** Hermes `image_generate` + OpenAI Codex OAuth for V0 candidates.  
+**DENY:** paid OpenAI Images API key as required V0 dep; ChatGPT Images UI browser automation; auto client-release; n8n/MCP/multi-agent orchestration; "Sol upgrade = geometry PASS"; secrets in chat/git; rewrite of demo QA history.  
+**KEEP:** human release gate + SOURCE_PRESERVE + Evidence Authority + DERIVED_RENDER non-authority.

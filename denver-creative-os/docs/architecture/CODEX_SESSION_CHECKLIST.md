@@ -17,14 +17,16 @@ One-page tracker for a local Codex implementation session.
 - [ ] Demo pointer only (no QA rewrite): `jobs/DCO-20260930-001/`
 - [ ] Confirmed local §35 PATCH map present (else STOP)
 
-## Denies (must remain true)
+## Allow / deny (must remain true)
 
-- [ ] No Image API / paid image gen
-- [ ] No ChatGPT Images browser automation
+- [ ] **ALLOW:** Hermes `image_generate` + OpenAI Codex OAuth for V0 candidates (human release gate kept)
+- [ ] No paid OpenAI Images API key as *required* V0 dependency
+- [ ] No ChatGPT Images UI browser automation
 - [ ] No auto client-release
 - [ ] No n8n/MCP/multi-agent orchestration in this phase
 - [ ] No secrets paste; `E:\Hermes` out of repo
 - [ ] Demo QA history untouched
+- [ ] SOURCE_PRESERVE / Evidence Authority / DERIVED_RENDER non-authority not relaxed by image_generate allow
 
 ## PATCH-0..15 (one at a time; verify before next)
 
@@ -47,7 +49,7 @@ One-page tracker for a local Codex implementation session.
 | [ ] | PATCH-14 | Secret scan + regression |
 | [ ] | PATCH-15 | Restore `MVP_READY_…` **only if** return gate all PASS |
 
-After each patch: note what changed / what verified / next PATCH id. Stop after PATCH-0 unless operator said continue.
+After each patch: note what changed / what verified / next PATCH id. **Do not redo PATCH-0** if already done locally; **hold PATCH-1 until operator GO.**
 
 ## Pitch-ready return gate (all required)
 
@@ -60,7 +62,7 @@ After each patch: note what changed / what verified / next PATCH id. Stop after 
 - [ ] evidence/verdict/release triad; no client-release override; EXPERIMENT_ONLY works
 - [ ] POS 3/3 · NEG 3/3 · AMB 3/3 · aggregate 9/9 (Sol Medium)
 - [ ] Sol High not used as rescue
-- [ ] Image API calls = 0; browser automation absent; secret scan clean
+- [ ] Paid OpenAI Images API key calls = 0; ChatGPT Images UI browser automation absent; human release gate present; secret scan clean
 - [ ] Historical V0 demo unchanged
 
 ## §36 final report

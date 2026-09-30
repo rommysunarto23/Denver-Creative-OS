@@ -12,9 +12,9 @@
 ## ID ringkas (operator)
 
 - Outcome produk: cutout furniture/PPH → ≥3 shot lifestyle studio enterprise.
-- Hermes orkestrasi; ChatGPT Images = human V0; Rommy final authority.
+- Hermes orkestrasi; V0 gen = Hermes `image_generate` (Codex OAuth); Rommy human release gate / final authority.
 - Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **ACCEPTED by Rommy 2026-09-30**; ChatGPT handoff committed and ready at `CODEX_HANDOFF.md`; next gate: explicit Codex implementation task. See `docs/architecture/V02_R1.md`.
-- **Jangan** Image API / browser auto / auto client-release.
+- **Jangan** paid Images API key as required V0 dep / browser auto ChatGPT Images UI / auto client-release. **Boleh** Hermes Codex OAuth `image_generate` (human gate tetap).
 - Baca dulu: `routing.md` -> `CONTEXT.md` -> architecture **Ideal V0.2-R1** (`V02_R1.md`); V0.2 base masih di `SYNTHESIS.md`.
 - **Codex session start:** paste `CODEX_START_PROMPT.md` dulu.
 
@@ -27,11 +27,11 @@ You are an implementation agent for **Denver Creative OS**: a Hermes-orchestrate
 | Role | Owns |
 |------|------|
 | **Hermes** | Intake, brief, shot plan, prompts, vision QA, revise loops, packaging state |
-| **ChatGPT Images (human)** | All lifestyle / lock pixels (manual UI only in V0/V0.2 design) |
+| **Hermes `image_generate` (Codex OAuth)** | V0 lifestyle / edit candidates (subscription OAuth). Human release gate still required. |
 | **Rommy** | Final authority: release, experiment accept, pitch claims, spend |
 | **Codex (you)** | Repo docs, skill/templates/fixtures patches **when instructed**; verify with contract fixtures |
 
-You do **not** generate client images, call Image APIs, drive browsers, or auto-approve releases.
+You do **not** drive ChatGPT Images UI browsers, require paid OpenAI Images API keys for V0, or auto-approve releases. Hermes Codex OAuth `image_generate` is the allowed V0 gen path (docs only until PATCH implementation).
 
 ---
 
@@ -41,9 +41,9 @@ You do **not** generate client images, call Image APIs, drive browsers, or auto-
 PPH / furniture cutout
   → Hermes orchestrates job files
   → ≥3 enterprise studio lifestyle shots
-  → human ChatGPT Images at PAUSE
+  → Hermes image_generate (OpenAI Codex OAuth) at generation PAUSE
   → Hermes vision QA
-  → Rommy final authority
+  → Rommy human release gate / final authority
 ```
 
 Demo proof: `denver-creative-os/jobs/DCO-20260930-001/` (DELIVERED, Image API spend US$0).  
@@ -82,7 +82,7 @@ Base dual layer (Ideal V0.2 — still required):
 
 **R1 deltas** (see `V02_R1.md`): lock = `DERIVED_RENDER` not ground truth; SOURCE_PRESERVE = deterministic product-raster composite; `SHOT_FEASIBILITY_GATE`; multidimensional release; fixtures 9/9; hard checkpoint return.
 
-Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without rewriting QA facts**.
+Hermes orchestrates (including allowed Codex OAuth `image_generate`); Rommy final authority **without rewriting QA facts**; human release gate kept.
 
 ---
 
@@ -90,7 +90,7 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 
 - Follow `routing.md` before large edits.
 - Prefer docs + skill/templates/fixtures changes that match **Ideal V0.2-R1** when the patch task is explicit (after ChatGPT handoff).
-- Keep generation mode `MANUAL_CHATGPT_IMAGES`; `incremental_image_api_spend_usd: 0`.
+- Prefer generation via Hermes `image_generate` + Codex OAuth for V0; keep `incremental_paid_openai_images_api_key_spend_usd: 0` unless operator opts in. Historical demo mode `MANUAL_CHATGPT_IMAGES` remains valid history.
 - Preserve immutable `source/product-reference.png` (never overwrite).
 - Version prompts (`*-vN.md`); never silent overwrite of QA history.
 - Record experiment accepts honestly; never relabel BLOCK/UNVERIFIABLE as client `RELEASE_ELIGIBLE`.
@@ -100,9 +100,10 @@ Hermes orchestrates; ChatGPT Images stays human; Rommy final authority **without
 ## Do not
 
 - Implement Ideal V0.2 / V0.2-R1 skill patch unless ChatGPT handoff exists and the user/task explicitly asks (this docs-only task does **not**).
-- Call or enable **Image API** / paid image generation.
-- **Browser-automate** ChatGPT Images UI.
-- **Auto client-release** or auto-approve (Hermes recommends only).
+- Require **paid OpenAI Images API key** path as a V0 dependency (optional later only).
+- **Browser-automate** ChatGPT Images UI (chat.openai.com / chatgpt.com).
+- **Auto client-release** or auto-approve (Hermes recommends only; human gate required).
+- Treat Hermes `image_generate` as relaxing SOURCE_PRESERVE / Evidence Authority / human release (it does not).
 - Claim "prompt escalate / Sol High alone → geometry PASS" (falsified by DCO-20260930-001 + Sol retest).
 - Add n8n, MCP, webhooks, DB, VPS, local FLUX, multi-agent splits, DFI coupling in V0/V0.2 core.
 - Touch `E:\Hermes` config/secrets unless Rommy explicitly asks; Hermes data root is **out of repo**.
@@ -118,11 +119,11 @@ When (and only when) tasked to implement V0.2-R1 after ChatGPT handoff:
 2. Optional generation-lock (`DERIVED_RENDER`, not ground truth) gated for `NOVEL_VIEW` / insufficient evidence; SOURCE_PRESERVE uses deterministic cutout composite (not forced lock on every shot).
 3. Override / experiment ledger cannot produce client `DELIVERED` / `RELEASE_ELIGIBLE` on critical FAIL or unresolved UNVERIFIABLE.
 4. **POS / NEG / AMB × 3 Sol Medium repeats (9/9)** contract fixtures exist and pass (see Verify).
-5. Checkpoint / roadmap text updated honestly (reopen closed only after R1 return gate: 9/9 + SOURCE_PRESERVE E2E + override impossible + NEEDS_EVIDENCE path + Image API $0).
-6. No Image API, no browser auto, no auto-approve.
+5. Checkpoint / roadmap text updated honestly (reopen closed only after R1 return gate: 9/9 + SOURCE_PRESERVE E2E + override impossible + NEEDS_EVIDENCE path + paid Images API key $0).
+6. No paid Images API key required for V0; no ChatGPT Images UI browser auto; no auto-approve; Hermes Codex OAuth `image_generate` allowed.
 7. Secret scan clean; commit message states contract scope.
 
-**Out of scope for that patch:** portal, email/WA, Image API enablement, new client jobs, pitch deck.
+**Out of scope for that patch:** portal, email/WA, paid Images API key enablement, new client jobs, pitch deck. (Hermes Codex OAuth image path is docs-allowed; skill wiring still follows PATCH sequence.)
 
 ---
 

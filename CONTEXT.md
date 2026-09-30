@@ -8,7 +8,7 @@
 
 ## ID ringkas
 
-- V0 demo **selesai** (`DCO-20260930-001` DELIVERED, Image API = US$0).
+- V0 demo **selesai** (`DCO-20260930-001` DELIVERED, paid Image API key = US$0). **V0 gen path amended:** Hermes Codex OAuth `image_generate` (docs/handoff; skill impl pending).
 - Ada lubang kontrak: SHOT-02 geometry BLOCK + override → package DELIVERED.
 - Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **ACCEPTED by Rommy 2026-09-30**; final ChatGPT Codex handoff committed and ready at `CODEX_HANDOFF.md`; skill belum diimplement; Codex tunggu explicit implementation task.
 - Model Hermes default: **`gpt-6.1-sol` medium**. Hermes data: **`E:\Hermes`** (di luar repo).
@@ -19,9 +19,9 @@
 
 ## Product outcome (locked intent)
 
-PPH / furniture **cutout** → Hermes orchestrates → **≥3** enterprise studio lifestyle shots → **ChatGPT Images (human V0)** → Rommy final authority.
+PPH / furniture **cutout** → Hermes orchestrates → **≥3** enterprise studio lifestyle shots → **Hermes `image_generate` (OpenAI Codex OAuth)** for V0 candidates → Rommy human release gate / final authority.
 
-Later (not now): email / WhatsApp / portal upload; optional Image API only if manual preserve/lock-edit fail closed.
+Later (not now): email / WhatsApp / portal upload; paid OpenAI Images API key path only if operator opts in (not required for V0). Manual ChatGPT Images paste is no longer the intended V0 gen path.
 
 ---
 
@@ -55,7 +55,7 @@ E:\rommy\Denver Creative OS\                 ← git root
 | Default reasoning | **`medium`** | `agent.reasoning_effort` |
 | Escalation | same model + `--reasoning high` (hard visual QA only) | MODEL doc |
 | Provider | `openai-codex` (ChatGPT/Codex OAuth) | gate PASS |
-| Image generation | **Manual ChatGPT Images UI** | no Image API |
+| Image generation | **Hermes `image_generate` + OpenAI Codex OAuth** (V0 path; handoff amended) | paid Images API key not required; human release gate kept |
 | Container memory | ~2g (`2147483648`) | gate / model doc |
 | Final authority | **Rommy** | always |
 
@@ -94,7 +94,7 @@ Demo lessons (geometry override contradiction):
 | Ideal V0.2-R1 **skill implement** | **Not done** (wait: explicit Codex implementation task; intentionally excluded here) |
 | POS/NEG/AMB semantic fixtures | **Not done** |
 | Identity lock proof trial | **Not done** (V0.1 track on roadmap) |
-| Portal / Image API | **Later** |
+| Portal / paid Images API key | **Later** (V0 gen = Hermes Codex OAuth; see FINAL handoff) |
 
 ---
 

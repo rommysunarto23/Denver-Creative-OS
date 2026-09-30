@@ -31,10 +31,31 @@ Treat this handoff as the final implementation authority for V0.2-R1.
 - `EXPERIMENT_ACCEPTED` is allowed only as `EXPERIMENT_ONLY`.
 - Acceptance model = `gpt-6.1-sol`, reasoning `medium`.
 - Sol High is diagnostic only; it cannot rescue a failed acceptance gate.
-- Image API spend stays `0`.
-- No ChatGPT browser automation.
+- **ALLOW (V0 image gen path):** Hermes-orchestrated `image_generate` with `image_gen.provider` = OpenAI (Codex auth) OAuth for candidate generation/edit (ChatGPT/Codex subscription OAuth; no separate DALL·E / paid OpenAI Images API key required for that path). See **V0 image generation path (Hermes Codex OAuth)** below.
+- **DENY:** Paid OpenAI Images API key path as a *required* V0 dependency (optional later only); browser automation of chat.openai.com / chatgpt.com Images UI; auto client-release without human gate; treating Hermes image automation as a fidelity/geometry fix.
+- Allowing Hermes `image_generate` does **not** relax `SOURCE_PRESERVE`, `SHOT_FEASIBILITY_GATE`, evidence-aware QA, DERIVED_RENDER non-authority, or the human release gate.
+- Keep incremental **paid** OpenAI Images API key spend at `0` unless the operator explicitly opts in later (distinct from Codex OAuth image_generate).
 - No auto client-release.
 - No n8n/MCP/webhooks/DB/VPS/local FLUX/multi-agent split in V0.2-R1.
+
+## V0 image generation path (Hermes Codex OAuth)
+
+**Operator decision (ACCEPTED 2026-09-30 Asia/Makassar):** V0 candidate generation/edit uses Hermes tool `image_generate` via provider **OpenAI (Codex auth)** — not manual ChatGPT Images paste, and not browser automation of the Images UI.
+
+Facts grounded in official Hermes docs (`https://hermes-agent.nousresearch.com/docs/user-guide/features/image-generation`) — do not invent beyond these:
+
+- Tool name: `image_generate`.
+- Providers include FAL, Nous gateway, OpenAI API key, and **OpenAI (Codex auth)**.
+- Codex auth posts to `/backend-api/codex/images/generations` and `/backend-api/codex/images/edits` (same family as the Codex client).
+- Editing supported with `image_url` / `reference_image_urls` (see current Hermes version / docs for reference caps; do not hardcode a stale cap).
+- On Codex auth, `model` / `quality` / `size` are **advisory**; the backend may return different geometry/quality. Results expose `reported_*` / related fields — record what was returned.
+- **GPT Image 2.5 is not on the Codex auth path** (use OpenAI API key or FAL for 2.5).
+- `hermes setup --portal` is Nous Portal / FAL gateway — **distinct** from Codex OAuth image provider; do not conflate.
+- Default image_gen is often FAL; operator must select Codex auth via `hermes tools` → Image Generation → OpenAI (Codex auth) if that is the intended V0 path.
+- Setup pointer: `hermes tools` → Image Generation → OpenAI (Codex auth); verify with **one text-to-image + one edit** smoke before relying on it in skill flows.
+- Geometry failures remain possible; Hermes automation ≠ fidelity fix. Human cross-check / release gate before client delivery stays mandatory.
+
+**Still DENY for V0.2-R1:** browser automation of ChatGPT Images UI; requiring paid OpenAI Images API key for V0; auto client-release; n8n/MCP multi-agent orchestration (unless already scoped elsewhere).
 
 ---
 
@@ -253,9 +274,10 @@ Create:
 `references/SOURCE_PRESERVE_RULES.md`
 
 Contract:
-- ChatGPT Images may create background/environment/props/scene plate.
+- Hermes `image_generate` (Codex OAuth) or human Images may create background/environment/props/scene plate for candidates.
 - Product geometry, silhouette, texture identity and product raster remain owned by original source.
-- Do not rely on ChatGPT Images to redraw the product.
+- Do not rely on generative redraw to invent product geometry; SOURCE_PRESERVE / compositor ownership of the product plate is unchanged.
+- Allowing Hermes generation does **not** make DERIVED_RENDER or generated pixels into Evidence Authority.
 
 Create:
 `denver-creative-os/tools/composite_source_preserve.py`
@@ -643,7 +665,7 @@ Static validator must assert:
 - DERIVED_RENDER cannot establish geometry
 - SOURCE_PRESERVE manifest exists
 - delivery schema supports package class
-- Image API/browser automation/auto-client-release remain denied
+- Paid OpenAI Images API key path is not required; ChatGPT Images UI browser automation and auto-client-release remain denied; Hermes Codex OAuth `image_generate` is the allowed V0 gen path (human release gate still required)
 
 Golden validator must assert:
 - 9 receipts
@@ -699,8 +721,9 @@ when ALL are true:
 - AMB 3/3
 - aggregate 9/9
 - Sol High not used as rescue
-- Image API calls = 0
-- browser automation absent
+- Paid OpenAI Images API key calls = 0 (Codex OAuth `image_generate` is allowed separately; not a paid Images API key dependency)
+- ChatGPT Images UI browser automation absent
+- Human release gate enforced (no auto client-release)
 - secret scan clean
 - historical V0 demo unchanged
 
@@ -710,7 +733,7 @@ Then checkpoint must explicitly record:
 V0.2-R1 fidelity contract acceptance: 9/9
 SOURCE_PRESERVE deterministic path: PASS
 NOVEL_VIEW insufficient-evidence routing: PASS
-Incremental Image API spend: US$0
+Incremental paid OpenAI Images API key spend: US$0 (Hermes Codex OAuth image_generate allowed; human release gate required)
 ```
 
 ---
@@ -776,7 +799,7 @@ Pitch-safe claims after DoD:
 - revision/fail-family tracking
 - human-controlled release
 - traceable lineage
-- zero incremental Image API spend in MVP
+- zero incremental paid OpenAI Images API key spend in MVP (Hermes Codex OAuth image_generate is the allowed V0 path; human release gate required)
 
 Do not claim:
 - fully autonomous production
@@ -827,12 +850,14 @@ golden:
   reasoning: medium
 
 cost:
-  image_api_calls: 0
+  paid_openai_images_api_key_calls: 0
+  hermes_codex_oauth_image_generate: allowed_v0_path
 
 denies:
   browser_automation: absent
   auto_client_release: absent
-  image_api: absent
+  paid_openai_images_api_key_required: absent
+  hermes_codex_oauth_image_generate: allowed_v0_path
 
 secrets_scan: PASS|FAIL
 
