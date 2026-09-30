@@ -1,7 +1,7 @@
 # CURRENT_CHECKPOINT
 
 **Status:** `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE`
-**Written:** 2026-09-30T19:55:00+08:00 (Asia/Makassar)
+**Written:** 2026-09-30T20:10:00+08:00 (Asia/Makassar)
 **Demo job:** `DCO-20260930-001`  
 **Product target (operator):** PPH-style furniture AI lifestyle from cutouts → enterprise studio (≥3 shots); Hermes orchestrates; V0 gen = Hermes image_generate (Codex OAuth; handoff amended); Rommy cross-check / human release gate before client; email/WA/portal later.
 
@@ -15,7 +15,9 @@ Pitch preparation remains gated until every item in the handoff's **Pitch-ready 
 **V0 gen path amended (2026-09-30 Asia/Makassar, handoff authority):** Hermes `image_generate` via OpenAI Codex OAuth — not manual ChatGPT Images paste. Human release gate + SOURCE_PRESERVE / Evidence Authority unchanged. Implementation still pending PATCH sequence; this line is docs/handoff only.
 
 
-## Demo job delivery (walkable proof)
+## Demo job delivery (walkable proof) — **HISTORICAL BASELINE**
+
+> V0 demo tables/gaps below are **historical baseline**, not current R2-lite requirements. Active generation authority = [`architecture/V02_R2_LITE.md`](architecture/V02_R2_LITE.md) (Hermes native openai-codex). Manual ChatGPT Images path is **SUPERSEDED**.
 
 Root: `denver-creative-os/jobs/DCO-20260930-001/`
 
@@ -31,7 +33,7 @@ Root: `denver-creative-os/jobs/DCO-20260930-001/`
 
 Generation: `MANUAL_CHATGPT_IMAGES`. Incremental Image API spend: **US$0**.
 
-## Proven (DCO-0 .. DCO-3)
+## Proven (DCO-0 .. DCO-3) — **HISTORICAL BASELINE**
 
 | PR | What is proven | Evidence |
 |----|----------------|----------|
@@ -40,7 +42,7 @@ Generation: `MANUAL_CHATGPT_IMAGES`. Incremental Image API spend: **US$0**.
 | **DCO-2** | Project skill `denver-creative-os`: INTAKE→PLAN→PROMPT→PAUSE→QA→REVISE→APPROVE→PACKAGE; fail-closed fidelity; human-only approve; Image API + browser automation denied | `skills/denver-creative-os/SKILL.md` + templates/references/fixtures |
 | **DCO-3** | One fictional furniture demo end-to-end through PACKAGE/DELIVERED; ≥1 REVISE cycle (SHOT-02 v1→v5); human approval; 3 finals + manifest | `jobs/DCO-20260930-001/` (see delivery table above) |
 
-## MVP Definition of Done (from DOCS_README)
+## MVP Definition of Done (from DOCS_README) — **HISTORICAL BASELINE** (V0 manual generation)
 
 | DoD item | Status | Note |
 |----------|--------|------|
@@ -59,10 +61,10 @@ Generation: `MANUAL_CHATGPT_IMAGES`. Incremental Image API spend: **US$0**.
 | delivery manifest generated | checked | `delivery/DELIVERY_MANIFEST.yaml` |
 | paid Image API calls = 0 | checked | `incremental_image_api_spend_usd: 0` |
 
-## Known gaps (honest)
+## Known gaps (honest) — **HISTORICAL BASELINE** (V0)
 
 1. **SHOT-02 geometry_drift** — Fail-closed geometry failed 4× (cand-01..Cand-04). Same fail family (wide/shallow body + thick legs). GPT Image is the primary cause. Operator override B accepted Cand-04 for scene/studio; Hermes decision remains **REVISE**. Package does **not** claim geometry passed.
-2. **Image API not automated** — V0 generation stays manual ChatGPT Images UI. Paid Image API remains DENY.
+2. **Image API key not required** — V0 historical gen was manual ChatGPT Images UI (**SUPERSEDED**). Active R2-lite gen = Hermes native openai-codex / Codex OAuth. Paid Images API key remains DENY as required dep; incremental spend target US$0.
 3. **Hermes skill project-load (Appendix A) unproven** — Exact install path into `E:\Hermes\skills` versus project-local load was not prototype-proven this session. Default remains project skill + `docker exec hermes hermes` CLI until proven.
 4. **Human gate required** — No auto-approve. Rommy cross-check before any client-facing use. Email / WhatsApp / portal integrations are later, not V0.
 
@@ -91,12 +93,18 @@ Do **not** add in V0 (still active):
 
 ## Next step (not done)
 
-**Codex HOLD.** Wait for ChatGPT final repo audit + post-audit Codex handoff. Do **not** implement PATCH-1..15 from R1.
-Architecture candidate: `architecture/V02_R2_LITE.md`.
+**Codex HOLD** (unchanged). Sequence:
+
+1. **Docs authority clean** (this commit) — routing → AGENTS → CONTEXT → ROADMAP → `V02_R2_LITE.md` (CANONICAL).
+2. **ChatGPT authority audit** of the cleanup SHA.
+3. Then **FINAL R2-lite Codex coding handoff** (not yet — do not write here).
+4. Only after handoff + explicit GO: R2-lite implement → E2E A/B/C + 9/9 → `DCO_PROJECT_READY_FOR_PITCH`.
+
+Do **not** implement PATCH-1..15 from R1. Do **not** release Codex HOLD. Canonical: `architecture/V02_R2_LITE.md`.
 
 ## Historical V0 pitch handoff — superseded by PATCH-0
 
-The following V0 handoff is historical context. Current next action is PATCH-1; this section does not authorize pitch preparation while the fidelity contract is reopened.
+The following V0 handoff is historical context. Current next action is docs authority clean → ChatGPT authority audit → FINAL R2-lite handoff (not PATCH-1). This section does not authorize pitch preparation.
 
 Inputs for the operator:
 
@@ -138,8 +146,8 @@ Historical checkpoint at the time of this V0 model-lock append: `MVP_READY_FOR_P
 | Operator status | ACCEPTED for ChatGPT final repo audit (Grok reconciled R2-lite) |
 | Codex | **HOLD** — do not implement PATCH-1..15 from R1; wait for post-audit handoff |
 | R1 handoff | SUPERSEDED (historical). PATCH-0 local reopen folded into this checkpoint |
-| Next | ChatGPT final repo audit → freeze → Codex implementation handoff |
+| Next | Docs authority clean → ChatGPT authority audit → FINAL R2-lite Codex handoff |
 
 **Grok residual risks (implementation smoke, not redesign):** (1) `ctx.dispatch_tool` from tool handler must be smoked on this Hermes install; (2) project plugins need `HERMES_ENABLE_PROJECT_PLUGINS=true` + `plugins.enabled`; (3) single pitch gate requires Mode A+B+C+9/9 before any pitch.
 
-**Next step (supersedes PATCH-1):** No Codex patches until post-audit handoff. Do not start skill/plugin/code.
+**Next step (supersedes PATCH-1):** Docs authority clean → ChatGPT authority audit → FINAL R2-lite handoff. No Codex patches until then. Do not start skill/plugin/code. Magic string unchanged: `MVP_REOPENED_FOR_HERMES_NATIVE_CREATIVE_MESH_V02_R2_LITE`.

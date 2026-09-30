@@ -1,3 +1,5 @@
+> **SUPERSEDED / HISTORICAL — do not execute.** Active canonical architecture is `V02_R2_LITE.md` (V0.2-R2-Lite). Codex HOLD until FINAL R2-lite coding handoff exists.
+
 # FINAL CODEX HANDOFF — Denver Creative OS V0.2-R1
 
 Repo: https://github.com/rommysunarto23/Denver-Creative-OS  

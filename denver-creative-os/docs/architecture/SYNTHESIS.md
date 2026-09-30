@@ -1,9 +1,6 @@
 # SYNTHESIS.md - V0.1 / Ideal V0.2 merge
 
-> **SUPERSEDED (operator-approved 2026-09-30):** Authoritative design intent is now **Ideal V0.2-R1** in `V02_R1.md` (Evidence Authority + Raster Preservation); the final Codex handoff is committed and ready at root `CODEX_HANDOFF.md`.
-> Ideal V0.2 dual-layer below remains the **base merge** (ChatGPT release contract + Grok B generation). ChatGPT paste @ `fb9bd9b` did **not** approve V0.2 as-is; recommended R1 with **6 deltas**.  
-> **Grok stance:** Agree — adopt V0.2-R1 over V0.2 as-is; Rommy approval and the ChatGPT coding handoff are complete. Codex must wait for an explicit implementation task. **No skill implement this turn.**
-> See also: `CHATGPT_V02_R1_NOTES.md`, brief note in `COMPARE_GROK_CHATGPT.md`.
+> **HISTORICAL / SUPERSEDED (authority 2026-09-30):** Active canonical architecture is **V0.2-R2-Lite** at `V02_R2_LITE.md` (Hermes-native creative mesh; FREEZE APPROVED). This file body is **Ideal V0.2 dual-layer audit history** only. R1 (`V02_R1.md` / `FINAL_CODEX_HANDOFF_DCO_V02_R1.md`) is also historical / do-not-execute. **Codex HOLD** until a FINAL R2-lite coding handoff exists. Do not implement from this body.
 
 **Phase:** B pick -> ChatGPT compare merge -> **V0.2-R1 harden (design only)**  
 **Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)  

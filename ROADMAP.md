@@ -1,6 +1,6 @@
-﻿# ROADMAP.md — Denver Creative OS
+# ROADMAP.md - Denver Creative OS
 
-**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
+**Updated:** 2026-09-30 ~20:10 Asia/Makassar (UTC+8)
 **Authority:** Rommy. Agents propose; they do not silently advance phases.
 
 ---
@@ -9,23 +9,25 @@
 
 | Fase | Status |
 |------|--------|
-| **V0** | **Done** — orchestrate + demo DELIVERED (honest geometry gap) |
-| **V0.2 / V0.2-R1** | Ideal **V0.2-R1** in `V02_R1.md` pending Rommy approve; implement after approve + ChatGPT handoff + Codex |
-| **V0.1** | Identity lock **proof** (NOVEL_VIEW path) — after/with contract layer |
-| **Later** | Portal / email-WA / Image API (only if manual paths fail) |
+| **V0** | **Done** - orchestrate + demo DELIVERED (honest geometry gap; historical manual Images) |
+| **V0.2-R1** | **SUPERSEDED / HISTORICAL** - do not implement R1 PATCH map |
+| **V0.2-R2-Lite** | **FREEZE APPROVED** (`V02_R2_LITE.md`) — **Codex HOLD** until FINAL R2-lite coding handoff after ChatGPT authority audit |
+| **Next implement** | R2-lite implementation → E2E (A/B/C + 9/9) → `DCO_PROJECT_READY_FOR_PITCH` |
+| **V0.1** | Identity lock **proof** (NOVEL_VIEW path) - after/with contract layer |
+| **Later** | Portal / email-WA / Image API key (only if operator opts in) |
 
 ---
 
-## V0 — Done (orchestration MVP)
+## V0 - Done (orchestration MVP) — historical baseline
 
-**Goal:** Prove workflow value in one day without Image API.
+**Goal:** Prove workflow value in one day without Image API key spend.
 
 Delivered:
 
 - Hermes + Codex OAuth text/vision gate.
 - Project skill `denver-creative-os` (INTAKE→…→PACKAGE).
-- Demo job `DCO-20260930-001` → 3 packaged shots, spend US$0.
-- Human ChatGPT Images checkpoint respected.
+- Demo job `DCO-20260930-001` → 3 packaged shots, incremental Image API-key spend US$0.
+- Human ChatGPT Images checkpoint respected (**historical gen path**; superseded by R2-lite native openai-codex).
 - Model lock: `gpt-6.1-sol` / medium.
 
 Known non-goals completed-as-denied: no n8n/MCP/DB/VPS/browser auto/auto-approve.
@@ -34,67 +36,63 @@ Known non-goals completed-as-denied: no n8n/MCP/DB/VPS/browser auto/auto-approve
 
 ---
 
-## V0.2 / V0.2-R1 - Fidelity contract reopen (next implement)
+## V0.2-R2-Lite - Current phase (FREEZE APPROVED; Codex HOLD)
 
-**Status:** Ideal V0.2 dual-layer designed in `SYNTHESIS.md`; **Ideal V0.2-R1** (6 deltas) in `V02_R1.md` **recommended** over V0.2 as-is.
-**Pending:** Rommy **approve V0.2-R1** + ChatGPT **Codex coding handoff** + **Codex implement** (skill/templates/fixtures/composite helper).
-**This docs commit does not implement the skill patch.** Codex must wait.
+**Canonical architecture:** `denver-creative-os/docs/architecture/V02_R2_LITE.md` — **FREEZE APPROVED**. Do not redesign.
 
-### Contract layer (required)
+**Status:** Architecture accepted; **docs authority cleanup** in progress → **ChatGPT authority audit** of cleanup SHA → then **FINAL R2-lite Codex coding handoff** → then Codex implement.
 
-- Evidence-aware triad: `evidence` → `verdict` (PASS/FAIL/UNVERIFIABLE) → `release` (ELIGIBLE/BLOCKED/NEEDS_EVIDENCE).
-- `view_support`: SUPPORTED / PARTIAL / NOVEL_VIEW.
-- Split `product_truth` vs `generation_guardrails`.
-- Split `presentation_quality` vs `product_fidelity` / release.
-- **No client-release override**; `EXPERIMENT_ACCEPTED` ≠ client-releasable.
-- Close demo contradiction: BLOCK + human approve must not become client `DELIVERED`/`RELEASE_ELIGIBLE`.
+**Codex HOLD:** Do **not** implement skill/plugin/code until that FINAL R2-lite handoff exists. Do **not** execute R1 PATCH-1..15.
 
-### R1 hardenings (required before implement)
+### Phase sequence (current)
 
-- Generation lock = `DERIVED_RENDER` / stabilizer — **not** ground truth; cannot alone promote UNVERIFIABLE->PASS.
-- SOURCE_PRESERVE = **deterministic cutout raster composite** (product pixels owned by source; scene by generative).
-- `SHOT_FEASIBILITY_GATE` before generate; NOVEL_VIEW+INSUFFICIENT -> NEEDS_EVIDENCE.
-- Multidimensional release (`shot_compliance`, `evidence_sufficiency`, ...).
-- Fixtures **9/9** (POS/NEG/AMB x 3 Sol Medium); hard checkpoint return gate (see `V02_R1.md` Delta 6).
+```text
+1. Docs authority clean (this commit)
+2. ChatGPT authority audit of cleanup SHA
+3. FINAL R2-lite Codex coding handoff (not yet — HOLD)
+4. R2-lite implementation (skills/plugins/fixtures per handoff)
+5. E2E Modes A / B / C + POS/NEG/AMB × 3 (9/9) on Sol Medium
+6. Only then: DCO_PROJECT_READY_FOR_PITCH (checkpoint magic update)
+```
 
-### Generation layer (paired, not instead-of)
+### Contract / product gates (required before pitch)
 
-- Primary production mode: **`SOURCE_PRESERVE`**.
-- Secondary: **`NOVEL_VIEW_GENERATIVE`** with optional **generation lock / ``DERIVED_RENDER``** (see V0.1 / V0.2-R1 Delta 1).
+- Evidence-aware triad + human-only client release (R2-lite laws).
+- Hermes native `openai-codex` image generation/edit; billing `CHATGPT_CODEX_OAUTH`; incremental Image API-key spend **US$0**; subscription **UNKNOWN**.
+- Mode A/B/C E2E proven; fixtures **9/9**.
+- Override / experiment accept cannot become client `RELEASE_ELIGIBLE` / `DELIVERED` on FAIL or unresolved UNVERIFIABLE.
+- Still: no paid Images API key as required dep, no browser auto, no auto client-release.
 
-### Exit criteria
+### Historical R1 note
 
-- POS / NEG / AMB x3 (9/9) fixtures pass on Sol Medium; SOURCE_PRESERVE E2E; override impossible; NOVEL_VIEW insufficient -> NEEDS_EVIDENCE.
-- Checkpoint text updated honestly only after R1 return gate (9/9 + SOURCE_PRESERVE E2E + override impossible + NEEDS_EVIDENCE path + Image API $0).
-- Still: no Image API, no browser auto, no auto client-release.
+Ideal V0.2 (`SYNTHESIS.md`) and V0.2-R1 (`V02_R1.md`, `FINAL_CODEX_HANDOFF_DCO_V02_R1.md`) remain as **audit history**. They are **not** the active implementation path.
 
 ---
 
-## V0.1 — Identity lock proof (generation EV)
+## V0.1 - Identity lock proof (generation EV)
 
-**Status:** Design adopted as Ideal V0.2-R1 addon for NOVEL_VIEW with lock=`DERIVED_RENDER` (not ground truth); **proof trial not run**.
+**Status:** Design concepts carried into R2-lite for NOVEL_VIEW / insufficient-evidence paths; **proof trial not run**.
 
-Intent (from SYNTHESIS / COMPARE):
+Intent (historical SYNTHESIS / COMPARE; now under R2-lite authority):
 
 1. One **SOURCE_PRESERVE** composite trial on the oak cutout (or successor sample).  
-2. One **NOVEL_VIEW** lock → proportion gate → lifestyle **edit/relight** trial (SHOT-02-class).  
-3. Lineage `source → lock_id → shot` in manifest.  
-4. Only then harden skill IdentityFirst / mode branches if trials warrant.
+2. One **NOVEL_VIEW** path with honest `NEEDS_EVIDENCE` when evidence is insufficient.  
+3. Lineage in manifest.  
+4. Only then harden skill mode branches if trials warrant.
 
-Do **not** force lock on every SOURCE_PRESERVE shot.  
 Do **not** treat Sol High / prompt-only as primary geometry fix (falsified).
 
 ---
 
-## Later — portal / Image API / distribution
+## Later - portal / Image API key / distribution
 
-Only after V0.2 contract honesty and (as needed) V0.1 lock proof:
+Only after R2-lite E2E honesty and (as needed) V0.1 lock proof:
 
 | Item | Note |
 |------|------|
 | Client portal / upload UX | Not V0; pitch hypothesis only |
 | Email / WhatsApp delivery | Operator-later; not Hermes auto |
-| **Image API** | **Later-phase flag** if manual SOURCE_PRESERVE / lock-edit still fail closed |
+| **Image API key** | **Later-phase flag** if Codex OAuth path still fails closed and operator opts in |
 | Multi-agent / n8n / MCP | Still deferred until single-agent proven insufficient |
 | Real PPH / agency pilots | Needs owned/licensed assets + Rommy go |
 
@@ -104,29 +102,28 @@ Only after V0.2 contract honesty and (as needed) V0.1 lock proof:
 
 - Browser automation of ChatGPT Images.  
 - Auto client-release / auto-approve.  
-- “Model swap alone fixes SHOT-02.”  
+- "Model swap alone fixes SHOT-02."  
 - DFI secrets in git.  
-- Production-ready claims before POS/NEG/AMB.
+- Production-ready / pitch-ready claims before Mode A/B/C + 9/9.  
+- Executing SUPERSEDED R1 PATCH map.  
+- Redesigning frozen `V02_R2_LITE.md`.
 
 ---
 
 ## Suggested next actions (human-gated)
 
-1. Rommy **approve Ideal V0.2-R1** (`V02_R1.md`).
-2. ChatGPT produces **Codex coding handoff** (file-by-file).
-3. Codex **implement** V0.2-R1 skill + templates + POS/NEG/AMB x3 fixtures + SOURCE_PRESERVE composite helper (explicit task only).
-4. Run fixture verification; update checkpoint only if R1 return gate met.
-5. Optional: V0.1 lock/edit proof jobs (still manual Images; lock = stabilizer not ground truth).
+1. **This commit:** reconcile docs authority chain to R2-lite (pointers/banners only).  
+2. ChatGPT **authority audit** of the cleanup SHA.  
+3. Produce **FINAL R2-lite Codex coding handoff** (file-by-file) — **not yet**.  
+4. Codex **implement** R2-lite per that handoff (explicit GO only).  
+5. Run Mode A/B/C E2E + fixture verification (9/9); update checkpoint only if pitch gate met → `DCO_PROJECT_READY_FOR_PITCH`.  
 6. Pitch proof pack (`PITCH_PREP_STUB.md`) only with honest experiment vs client-release language.
 
 ---
 
 ## See also
 
-- `AGENTS.md` - DoD for the V0.2-R1 patch
-- `routing.md` — where to read  
-- `CONTEXT.md` — current facts  
-- `denver-creative-os/docs/architecture/V02_R1.md` - Ideal V0.2-R1; `SYNTHESIS.md` - V0.2 base
-
-
-
+- `AGENTS.md` - DoD for the R2-lite patch (HOLD until handoff)
+- `routing.md` - where to read  
+- `CONTEXT.md` - current facts  
+- `denver-creative-os/docs/architecture/V02_R2_LITE.md` - **CANONICAL**

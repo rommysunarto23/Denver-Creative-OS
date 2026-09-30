@@ -1,4 +1,5 @@
 # MODEL_ARCHITECTURE_V0
+> **HISTORICAL V0 baseline.** Manual ChatGPT Images / no image_gen automation is **SUPERSEDED**. Active R2 generation authority = `denver-creative-os/docs/architecture/V02_R2_LITE.md` (Hermes native `openai-codex` / Codex OAuth `image_generate`). Model/runtime rows below remain useful ops history; do not treat this file as current generation contract.
 
 **Locked:** 2026-09-30T16:15:00+08:00 (Asia/Makassar)  
 **Scope:** Denver Creative OS V0 - Hermes agent runtime model tree.  
