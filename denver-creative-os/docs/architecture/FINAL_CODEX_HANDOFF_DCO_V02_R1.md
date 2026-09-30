@@ -39,6 +39,26 @@ Treat this handoff as the final implementation authority for V0.2-R1.
 ---
 
 # Patch plan
+## §35 Implementation sequencing (PATCH ids)
+
+PATCH-0 = Checkpoint → MVP_REOPENED_FOR_FIDELITY_CONTRACT_V02_R1 (CURRENT_CHECKPOINT.md)
+PATCH-1 = Patch plan §1 Governance/docs + create/update V02_R1.md + SYNTHESIS append
+PATCH-2 = §3 Evidence Authority (+ related refs)
+PATCH-3 = §4 Product truth schema + §5 SHOT_FEASIBILITY_GATE
+PATCH-4 = §8 QA + release schema (evidence/verdict/release)
+PATCH-5 = §6 SOURCE_PRESERVE compositor + tests
+PATCH-6 = §7 NOVEL_VIEW + DERIVED_RENDER
+PATCH-7 = §2 Skill contract SKILL.md integration
+PATCH-8 = §9 Delivery + §10 State machine + §11 Fail-family
+PATCH-9 = Golden fixtures POS/NEG/AMB
+PATCH-10 = Validators
+PATCH-11 = 3×3 Sol Medium acceptance batch
+PATCH-12 = SOURCE_PRESERVE E2E proof
+PATCH-13 = NOVEL_VIEW NEEDS_EVIDENCE proof
+PATCH-14 = Secret scan + regression
+PATCH-15 = Restore MVP_READY only if return gate all PASS
+
+---
 
 ## 1. Governance/docs
 
@@ -768,7 +788,7 @@ Do not claim:
 
 ---
 
-# Required final Codex report
+# §36 Required final Codex report
 
 Return:
 
