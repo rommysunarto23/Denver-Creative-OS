@@ -1,6 +1,6 @@
-﻿# CONTEXT.md — current state (Denver Creative OS)
+# CONTEXT.md — current state (Denver Creative OS)
 
-**As of:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
+**As of:** 2026-09-30 ~18:15 Asia/Makassar (UTC+8)
 **Repo:** `rommysunarto23/Denver-Creative-OS` · branch `main`  
 **Audience:** Codex / Cursor / operators. English + short ID summary.
 
@@ -13,6 +13,7 @@
 - Ideal **V0.2-R1** di `docs/architecture/V02_R1.md` (6 deltas; supersede V0.2 as-is) — **ACCEPTED by Rommy 2026-09-30**; final ChatGPT Codex handoff committed and ready at `CODEX_HANDOFF.md`; skill belum diimplement; Codex tunggu explicit implementation task.
 - Model Hermes default: **`gpt-6.1-sol` medium**. Hermes data: **`E:\Hermes`** (di luar repo).
 - Codex docs root: `AGENTS.md`, `routing.md`, this file, `ROADMAP.md`.
+- **Codex session start:** paste root `CODEX_START_PROMPT.md` then follow its read order (authority: FINAL handoff §35/§36).
 
 ---
 
@@ -111,7 +112,10 @@ Demo lessons (geometry override contradiction):
 
 ## Pointers
 
+- **Codex session start:** paste `CODEX_START_PROMPT.md` → follow its read order  
+- Handoff pointer: `CODEX_HANDOFF.md` → FINAL authority + checklist  
 - Behavior contract: `AGENTS.md`  
 - Router: `routing.md`  
 - Sequencing: `ROADMAP.md`  
-- Ideal V0.2-R1: `denver-creative-os/docs/architecture/V02_R1.md` (base: `SYNTHESIS.md`)
+- Ideal V0.2-R1: `denver-creative-os/docs/architecture/V02_R1.md` (base: `SYNTHESIS.md`)  
+- Session checklist: `denver-creative-os/docs/architecture/CODEX_SESSION_CHECKLIST.md`

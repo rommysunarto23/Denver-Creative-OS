@@ -3,7 +3,7 @@
 **Audience:** Codex, Cursor, and other coding agents working in this repo.  
 **Operator:** Rommy (final authority).  
 **Language:** English agent contracts + short Indonesian (ID) operator summary.  
-**Updated:** 2026-09-30 ~17:36 Asia/Makassar (UTC+8)
+**Updated:** 2026-09-30 ~18:15 Asia/Makassar (UTC+8)
 
 > Pointer files: `AGENT.md` → this file. Router: `routing.md` (see also `ROUTER.md`).
 
@@ -16,6 +16,7 @@
 - Ideal **V0.2-R1** (Evidence Authority + Raster Preservation) supersedes Ideal V0.2 as-is — **ACCEPTED by Rommy 2026-09-30**; ChatGPT handoff committed and ready at `CODEX_HANDOFF.md`; next gate: explicit Codex implementation task. See `docs/architecture/V02_R1.md`.
 - **Jangan** Image API / browser auto / auto client-release.
 - Baca dulu: `routing.md` -> `CONTEXT.md` -> architecture **Ideal V0.2-R1** (`V02_R1.md`); V0.2 base masih di `SYNTHESIS.md`.
+- **Codex session start:** paste `CODEX_START_PROMPT.md` dulu.
 
 ---
 
@@ -156,6 +157,7 @@ Until POS/NEG/AMB fixtures are added under the skill tree (planned with V0.2), t
 
 ## Related root docs
 
+- **Codex session start:** paste `CODEX_START_PROMPT.md` then follow its read order (see `CODEX_HANDOFF.md`)
 - `CONTEXT.md` — current repo/runtime state  
 - `ROADMAP.md` — V0 → V0.2 → later  
 - `routing.md` — read order + decision tree + when to stop and ask  
